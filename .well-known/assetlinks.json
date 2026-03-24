@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bookmyclinic.app",
+      "sha256_cert_fingerprints":
+        ["6B:70:AD:AB:D6:D9:E6:C1:39:BA:D5:87:E7:5F:AE:EE:F2:9F:31:04:51:66:9D:BF:9F:05:39:07:5A:E2:0F:52"]
+    }
+  }
+]
