@@ -9,367 +9,98 @@
   <meta name="description" content="BookMyClinics — Book doctor appointments online in Gujarat, India. Find verified specialists, check timings and book clinics 24x7. No OTP, no registration needed.">
   <meta name="keywords" content="BookMyClinics, book doctor appointment Gujarat, clinic booking Surat, online doctor booking India, book clinic appointment">
   <title>BookMyClinics | Book Doctor Appointments Online in Gujarat, India</title>
-  <!-- Open Graph Tags -->
 <meta property="og:title" content="BookMyClinics | Book Doctor Appointments Online in Gujarat">
 <meta property="og:description" content="Find verified specialists, check timings and book clinic appointments 24x7 in Gujarat. No OTP, no registration needed.">
 <meta property="og:url" content="https://bookmyclinics.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://bookmyclinics.com/icon-512.png">
 <meta property="og:site_name" content="BookMyClinics">
-
-<!-- WhatsApp & Twitter Preview -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BookMyClinics | Book Doctor Appointments in Gujarat">
 <meta name="twitter:description" content="Book doctor appointments online 24x7 in Gujarat. Zero OTP. Zero registration.">
 <meta name="twitter:image" content="https://bookmyclinics.com/icon-512.png">
+<!-- PWA -->
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#0f172a" />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy:    #0f172a;
-      --slate:   #1e293b;
-      --blue:    #2563eb;
-      --blue-lt: #3b82f6;
-      --teal:    #0d9488;
-      --green:   #10b981;
-      --amber:   #f59e0b;
-      --white:   #ffffff;
-      --muted:   #64748b;
-      --border:  #1e293b;
-      --sky:     #38bdf8;
+      --navy:#0f172a;--slate:#1e293b;--blue:#2563eb;--blue-lt:#3b82f6;
+      --teal:#0d9488;--green:#10b981;--amber:#f59e0b;--white:#ffffff;
+      --muted:#64748b;--border:#1e293b;--sky:#38bdf8;
     }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--navy);
-      color: var(--white);
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(15,23,42,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 0 24px;
-      height: 64px;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-logo {
-      font-family: 'Sora', sans-serif;
-      font-size: 20px; font-weight: 800;
-      text-decoration: none;
-    }
-    .nav-logo span:first-child { color: var(--white); }
-    .nav-logo .my { color: var(--sky); }
-    .nav-logo .clinic { color: var(--white); }
-
-    .nav-cta {
-      background: var(--blue);
-      color: var(--white);
-      padding: 9px 20px;
-      border-radius: 10px;
-      font-size: 14px; font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
-      white-space: nowrap;
-    }
-    .nav-cta:hover { background: #1d4ed8; }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      padding: 100px 24px 60px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Animated background grid */
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(37,99,235,0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
-      background-size: 40px 40px;
-      animation: gridMove 20s linear infinite;
-    }
-    @keyframes gridMove {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(40px); }
-    }
-
-    /* Glow orbs */
-    .hero::after {
-      content: '';
-      position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative; z-index: 1;
-      max-width: 760px;
-      text-align: center;
-    }
-
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(37,99,235,0.15);
-      border: 1px solid rgba(37,99,235,0.3);
-      padding: 6px 16px; border-radius: 99px;
-      font-size: 12px; font-weight: 600; color: var(--sky);
-      margin-bottom: 28px;
-      animation: fadeUp 0.6s ease both;
-    }
-    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-    .hero h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(32px, 6vw, 58px);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
-      animation: fadeUp 0.6s 0.1s ease both;
-    }
-    .hero h1 .accent { color: var(--sky); }
-
-    .hero-sub {
-      font-size: clamp(15px, 2vw, 18px);
-      color: rgba(255,255,255,0.6);
-      line-height: 1.7;
-      max-width: 580px;
-      margin: 0 auto 36px;
-      animation: fadeUp 0.6s 0.2s ease both;
-    }
-
-    .hero-actions {
-      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
-      animation: fadeUp 0.6s 0.3s ease both;
-    }
-    .btn-primary {
-      background: var(--blue);
-      color: var(--white);
-      padding: 14px 28px;
-      border-radius: 12px;
-      font-size: 15px; font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 4px 20px rgba(37,99,235,0.4);
-    }
-    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(37,99,235,0.5); }
-    .btn-secondary {
-      background: rgba(255,255,255,0.07);
-      color: var(--white);
-      padding: 14px 28px;
-      border-radius: 12px;
-      font-size: 15px; font-weight: 600;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.12);
-      transition: all 0.2s;
-    }
-    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
-
-    /* Scroll indicator */
-    .scroll-hint {
-      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: 6px;
-      font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 1px;
-      animation: fadeUp 1s 0.8s ease both;
-    }
-    .scroll-arrow { width: 20px; height: 20px; border-right: 2px solid rgba(255,255,255,0.2); border-bottom: 2px solid rgba(255,255,255,0.2); transform: rotate(45deg); animation: scrollBounce 1.5s infinite; }
-    @keyframes scrollBounce { 0%,100%{transform:rotate(45deg) translateY(0)} 50%{transform:rotate(45deg) translateY(4px)} }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── STATS BAR ── */
-    .stats-bar {
-      background: var(--slate);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 20px 24px;
-    }
-    .stats-inner {
-      max-width: 960px; margin: 0 auto;
-      display: flex; justify-content: space-around; flex-wrap: wrap; gap: 16px;
-    }
-    .stat { text-align: center; }
-    .stat-num { font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 800; color: var(--sky); }
-    .stat-label { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
-
-    /* ── SECTIONS ── */
-    section { padding: 80px 24px; }
-    .section-inner { max-width: 960px; margin: 0 auto; }
-    .section-tag {
-      display: inline-block;
-      font-size: 11px; font-weight: 700; letter-spacing: 2px;
-      color: var(--sky); text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(26px, 4vw, 38px);
-      font-weight: 800; line-height: 1.2;
-      margin-bottom: 16px;
-    }
-    .section-sub {
-      font-size: 16px; color: rgba(255,255,255,0.5);
-      max-width: 520px; line-height: 1.7;
-      margin-bottom: 48px;
-    }
-
-    /* ── HOW IT WORKS ── */
-    #how { background: var(--slate); }
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
-    }
-    .step-card {
-      background: var(--navy);
-      border-radius: 16px;
-      padding: 24px;
-      border: 1px solid rgba(255,255,255,0.06);
-      position: relative;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .step-card:hover { transform: translateY(-3px); border-color: rgba(37,99,235,0.4); }
-    .step-num {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--blue);
-      font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 16px;
-    }
-    .step-title { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
-    .step-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
-    .step-connector {
-      display: none;
-    }
-
-    /* ── BENEFITS ── */
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .benefit-col {
-      background: var(--slate);
-      border-radius: 20px;
-      padding: 28px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .benefit-col-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 14px; font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .benefit-col-title.blue { color: var(--sky); }
-    .benefit-col-title.teal { color: #2dd4bf; }
-    .benefit-col-title.amber { color: var(--amber); }
-    .benefit-item {
-      display: flex; gap: 12px; align-items: flex-start;
-      margin-bottom: 16px;
-    }
-    .benefit-item:last-child { margin-bottom: 0; }
-    .benefit-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-    .benefit-item-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
-    .benefit-item-desc { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.5; }
-
-    /* Privacy strip */
-    .privacy-strip {
-      background: rgba(15,23,42,0.8);
-      border: 1px solid rgba(56,189,248,0.2);
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin-top: 20px;
-      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
-    }
-    .privacy-item {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 12px; color: #4ade80; font-weight: 600;
-    }
-
-    /* ── REGISTER CTA ── */
-    #register {
-      background: linear-gradient(135deg, rgba(37,99,235,0.15), rgba(13,148,136,0.1));
-      border-top: 1px solid rgba(37,99,235,0.2);
-      border-bottom: 1px solid rgba(37,99,235,0.2);
-    }
-    .cta-box {
-      text-align: center;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    .cta-box h2 {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(24px, 4vw, 36px);
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-    .cta-box p {
-      font-size: 16px; color: rgba(255,255,255,0.6);
-      line-height: 1.7; margin-bottom: 32px;
-    }
-    .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn-whatsapp {
-      display: flex; align-items: center; gap: 10px;
-      background: #25d366; color: var(--white);
-      padding: 14px 28px; border-radius: 12px;
-      font-size: 15px; font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
-    }
-    .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-1px); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--slate);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 40px 24px;
-      text-align: center;
-    }
-    .footer-logo {
-      font-family: 'Sora', sans-serif;
-      font-size: 22px; font-weight: 800;
-      margin-bottom: 8px;
-    }
-    .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
-    .footer-links {
-      display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-    .footer-links a {
-      font-size: 13px; color: rgba(255,255,255,0.5);
-      text-decoration: none; transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--sky); }
-    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
-
-    /* ── MOBILE ── */
-    @media (max-width: 600px) {
-      .hero-actions { flex-direction: column; align-items: center; }
-      .btn-primary, .btn-secondary { width: 100%; max-width: 300px; text-align: center; }
-      .stats-inner { gap: 24px; }
-      .cta-actions { flex-direction: column; align-items: center; }
-      .btn-whatsapp, .btn-primary { width: 100%; max-width: 300px; justify-content: center; }
-    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,23,42,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+    .nav-logo{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;text-decoration:none;}
+    .nav-cta{background:var(--blue);color:var(--white);padding:9px 20px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;transition:background 0.2s;white-space:nowrap;}
+    .nav-cta:hover{background:#1d4ed8;}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 24px 60px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,0.07) 1px,transparent 1px);background-size:40px 40px;animation:gridMove 20s linear infinite;}
+    @keyframes gridMove{0%{transform:translateY(0)}100%{transform:translateY(40px)}}
+    .hero::after{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,0.15) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+    .hero-content{position:relative;z-index:1;max-width:760px;text-align:center;}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.3);padding:6px 16px;border-radius:99px;font-size:12px;font-weight:600;color:var(--sky);margin-bottom:28px;animation:fadeUp 0.6s ease both;}
+    .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+    .hero h1{font-family:'Sora',sans-serif;font-size:clamp(32px,6vw,58px);font-weight:800;line-height:1.1;letter-spacing:-1px;margin-bottom:20px;animation:fadeUp 0.6s 0.1s ease both;}
+    .hero h1 .accent{color:var(--sky);}
+    .hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,0.6);line-height:1.7;max-width:580px;margin:0 auto 36px;animation:fadeUp 0.6s 0.2s ease both;}
+    .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both;}
+    .btn-primary{background:var(--blue);color:var(--white);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 20px rgba(37,99,235,0.4);}
+    .btn-primary:hover{background:#1d4ed8;transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,99,235,0.5);}
+    .btn-secondary{background:rgba(255,255,255,0.07);color:var(--white);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.12);transition:all 0.2s;}
+    .btn-secondary:hover{background:rgba(255,255,255,0.12);}
+    .scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;animation:fadeUp 1s 0.8s ease both;}
+    .scroll-arrow{width:20px;height:20px;border-right:2px solid rgba(255,255,255,0.2);border-bottom:2px solid rgba(255,255,255,0.2);transform:rotate(45deg);animation:scrollBounce 1.5s infinite;}
+    @keyframes scrollBounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(4px)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .stats-bar{background:var(--slate);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:20px 24px;}
+    .stats-inner{max-width:960px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px;}
+    .stat{text-align:center;}
+    .stat-num{font-family:'Sora',sans-serif;font-size:24px;font-weight:800;color:var(--sky);}
+    .stat-label{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px;}
+    section{padding:80px 24px;}
+    .section-inner{max-width:960px;margin:0 auto;}
+    .section-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--sky);text-transform:uppercase;margin-bottom:12px;}
+    .section-title{font-family:'Sora',sans-serif;font-size:clamp(26px,4vw,38px);font-weight:800;line-height:1.2;margin-bottom:16px;}
+    .section-sub{font-size:16px;color:rgba(255,255,255,0.5);max-width:520px;line-height:1.7;margin-bottom:48px;}
+    #how{background:var(--slate);}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+    .step-card{background:var(--navy);border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.06);position:relative;transition:transform 0.2s,border-color 0.2s;}
+    .step-card:hover{transform:translateY(-3px);border-color:rgba(37,99,235,0.4);}
+    .step-num{width:40px;height:40px;border-radius:50%;background:var(--blue);font-family:'Sora',sans-serif;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+    .step-title{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;}
+    .step-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;}
+    .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+    .benefit-col{background:var(--slate);border-radius:20px;padding:28px;border:1px solid rgba(255,255,255,0.06);}
+    .benefit-col-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .benefit-col-title.blue{color:var(--sky);}
+    .benefit-col-title.teal{color:#2dd4bf;}
+    .benefit-col-title.amber{color:var(--amber);}
+    .benefit-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px;}
+    .benefit-item:last-child{margin-bottom:0;}
+    .benefit-icon{font-size:18px;flex-shrink:0;margin-top:1px;}
+    .benefit-item-title{font-size:13px;font-weight:600;margin-bottom:2px;}
+    .benefit-item-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5;}
+    .privacy-strip{background:rgba(15,23,42,0.8);border:1px solid rgba(56,189,248,0.2);border-radius:12px;padding:16px 20px;margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+    .privacy-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#4ade80;font-weight:600;}
+    #register{background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(13,148,136,0.1));border-top:1px solid rgba(37,99,235,0.2);border-bottom:1px solid rgba(37,99,235,0.2);}
+    .cta-box{text-align:center;max-width:640px;margin:0 auto;}
+    .cta-box h2{font-family:'Sora',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;margin-bottom:16px;}
+    .cta-box p{font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:32px;}
+    .cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .btn-whatsapp{display:flex;align-items:center;gap:10px;background:#25d366;color:var(--white);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 20px rgba(37,211,102,0.3);}
+    .btn-whatsapp:hover{background:#1ebe5d;transform:translateY(-1px);}
+    footer{background:var(--slate);border-top:1px solid rgba(255,255,255,0.06);padding:40px 24px;text-align:center;}
+    .footer-logo{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;margin-bottom:8px;}
+    .footer-tagline{font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:20px;}
+    .footer-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
+    .footer-links a{font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--sky);}
+    .footer-copy{font-size:12px;color:rgba(255,255,255,0.25);}
+    @media(max-width:600px){.hero-actions{flex-direction:column;align-items:center;}.btn-primary,.btn-secondary{width:100%;max-width:300px;text-align:center;}.stats-inner{gap:24px;}.cta-actions{flex-direction:column;align-items:center;}.btn-whatsapp,.btn-primary{width:100%;max-width:300px;justify-content:center;}}
   </style>
 </head>
 <body>
@@ -377,57 +108,39 @@
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-  <img src="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-512.png" alt="BookMyClinic" style="width:36px;height:36px;border-radius:8px;flex-shrink:0;">
-  <span><span style="color:#fff">Book</span><span style="color:#38bdf8">My</span><span style="color:#fff">Clinic</span></span>
-</a>
-    <div style="display:flex;gap:16px;align-items:center;"><a href="#book" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Book</a><a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=contact" target="_blank" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Contact</a><a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=careers" target="_blank" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Careers</a><a href="#register" class="nav-cta">For Clinics</a></div>
+      <img src="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-512.png" alt="BookMyClinic" style="width:36px;height:36px;border-radius:8px;flex-shrink:0;">
+      <span><span style="color:#fff">Book</span><span style="color:#38bdf8">My</span><span style="color:#fff">Clinic</span></span>
+    </a>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <a href="#book" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Book</a>
+      <a href="/app?page=contact" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Contact</a>
+      <a href="/app?page=careers" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Careers</a>
+      <a href="#register" class="nav-cta">For Clinics</a>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Gujarat, India
-      </div>
-      <h1>
-        Does every patient<br>
-        in your city know<br>
-        <span class="accent">your clinic exists?</span>
-      </h1>
-      <p class="hero-sub">
-        BookMyClinic puts your clinic on the map — all specialists, timings, and live booking — visible to patients 24x7. Zero wasted visits. Zero missed appointments.
-      </p>
+      <div class="hero-badge"><span class="badge-dot"></span>Gujarat, India</div>
+      <h1>Does every patient<br>in your city know<br><span class="accent">your clinic exists?</span></h1>
+      <p class="hero-sub">BookMyClinic puts your clinic on the map — all specialists, timings, and live booking — visible to patients 24x7. Zero wasted visits. Zero missed appointments.</p>
       <div class="hero-actions">
-        <a href="#book" class="btn-primary">Book an Appointment</a><a href="#register" style="background:rgba(255,255,255,0.07);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.12);">Register Your Clinic</a>
+        <a href="#book" class="btn-primary">Book an Appointment</a>
+        <a href="#register" style="background:rgba(255,255,255,0.07);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.12);">Register Your Clinic</a>
         <a href="#how" class="btn-secondary">See How It Works</a>
       </div>
     </div>
-    <div class="scroll-hint">
-      <span>SCROLL</span>
-      <div class="scroll-arrow"></div>
-    </div>
+    <div class="scroll-hint"><span>SCROLL</span><div class="scroll-arrow"></div></div>
   </section>
 
   <!-- STATS -->
   <div class="stats-bar">
     <div class="stats-inner">
-      <div class="stat">
-        <div class="stat-num">24x7</div>
-        <div class="stat-label">Booking Available</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">0</div>
-        <div class="stat-label">OTP or Registration</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">₹0</div>
-        <div class="stat-label">To Get Started</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">5 min</div>
-        <div class="stat-label">Setup Time</div>
-      </div>
+      <div class="stat"><div class="stat-num">24x7</div><div class="stat-label">Booking Available</div></div>
+      <div class="stat"><div class="stat-num">0</div><div class="stat-label">OTP or Registration</div></div>
+      <div class="stat"><div class="stat-num">₹0</div><div class="stat-label">To Get Started</div></div>
+      <div class="stat"><div class="stat-num">5 min</div><div class="stat-label">Setup Time</div></div>
     </div>
   </div>
 
@@ -438,26 +151,10 @@
       <h2 class="section-title">Up and running in 4 steps</h2>
       <p class="section-sub">No technical knowledge needed. If you can use WhatsApp, you can use BookMyClinic.</p>
       <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">1</div>
-          <div class="step-title">Register Free</div>
-          <div class="step-desc">Fill a simple form online. Takes 5 minutes. No payment needed to start.</div>
-        </div>
-        <div class="step-card">
-          <div class="step-num">2</div>
-          <div class="step-title">Add Doctors & Timings</div>
-          <div class="step-desc">Add each doctor's name, specialty, and weekly schedule from your clinic portal.</div>
-        </div>
-        <div class="step-card">
-          <div class="step-num">3</div>
-          <div class="step-title">Share Your Booking Link</div>
-          <div class="step-desc">Share your unique link on WhatsApp, clinic board, or prescription pad.</div>
-        </div>
-        <div class="step-card">
-          <div class="step-num">4</div>
-          <div class="step-title">Go Live 24x7</div>
-          <div class="step-desc">Patients book slots. You get WhatsApp confirmation. Zero calls needed.</div>
-        </div>
+        <div class="step-card"><div class="step-num">1</div><div class="step-title">Register Free</div><div class="step-desc">Fill a simple form online. Takes 5 minutes. No payment needed to start.</div></div>
+        <div class="step-card"><div class="step-num">2</div><div class="step-title">Add Doctors & Timings</div><div class="step-desc">Add each doctor's name, specialty, and weekly schedule from your clinic portal.</div></div>
+        <div class="step-card"><div class="step-num">3</div><div class="step-title">Share Your Booking Link</div><div class="step-desc">Share your unique link on WhatsApp, clinic board, or prescription pad.</div></div>
+        <div class="step-card"><div class="step-num">4</div><div class="step-title">Go Live 24x7</div><div class="step-desc">Patients book slots. You get WhatsApp confirmation. Zero calls needed.</div></div>
       </div>
     </div>
   </section>
@@ -468,47 +165,14 @@
       <div class="section-tag">Why BookMyClinic</div>
       <h2 class="section-title">Better for patients.<br>Smarter for doctors.</h2>
       <p class="section-sub">Every feature is designed around one goal — zero worthless visits, both ways.</p>
-
       <div class="benefits-grid">
-
-        <!-- Patients -->
         <div class="benefit-col">
           <div class="benefit-col-title blue">For Patients</div>
-          <div class="benefit-item">
-            <div class="benefit-icon">📋</div>
-            <div>
-              <div class="benefit-item-title">See all specialists upfront</div>
-              <div class="benefit-item-desc">Name, specialty, days & timings — all visible before booking</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">📅</div>
-            <div>
-              <div class="benefit-item-title">Book anytime — 24x7</div>
-              <div class="benefit-item-desc">No need to call or visit to check availability</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🏖️</div>
-            <div>
-              <div class="benefit-item-title">Know leave days in advance</div>
-              <div class="benefit-item-desc">No wasted trip to find doctor absent</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">⏱️</div>
-            <div>
-              <div class="benefit-item-title">Pick exact time slot</div>
-              <div class="benefit-item-desc">Come at the right time — minimal waiting</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">📱</div>
-            <div>
-              <div class="benefit-item-title">WhatsApp confirmation</div>
-              <div class="benefit-item-desc">Instant booking ID sent right after booking</div>
-            </div>
-          </div>
+          <div class="benefit-item"><div class="benefit-icon">📋</div><div><div class="benefit-item-title">See all specialists upfront</div><div class="benefit-item-desc">Name, specialty, days & timings — all visible before booking</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">📅</div><div><div class="benefit-item-title">Book anytime — 24x7</div><div class="benefit-item-desc">No need to call or visit to check availability</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">🏖️</div><div><div class="benefit-item-title">Know leave days in advance</div><div class="benefit-item-desc">No wasted trip to find doctor absent</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">⏱️</div><div><div class="benefit-item-title">Pick exact time slot</div><div class="benefit-item-desc">Come at the right time — minimal waiting</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">📱</div><div><div class="benefit-item-title">WhatsApp confirmation</div><div class="benefit-item-desc">Instant booking ID sent right after booking</div></div></div>
           <div class="privacy-strip">
             <div class="privacy-item">✔ No account needed</div>
             <div class="privacy-item">✔ No OTP</div>
@@ -517,93 +181,28 @@
             <div class="privacy-item">✔ No promo messages</div>
           </div>
         </div>
-
-        <!-- Doctors -->
         <div class="benefit-col">
           <div class="benefit-col-title teal">For Doctors</div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🩺</div>
-            <div>
-              <div class="benefit-item-title">Know your day before you arrive</div>
-              <div class="benefit-item-desc">Check appointments — decide if worth visiting today</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🚫</div>
-            <div>
-              <div class="benefit-item-title">Zero worthless visits — both ways</div>
-              <div class="benefit-item-desc">No patient finds doctor absent. No doctor waits for empty slots.</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🗓️</div>
-            <div>
-              <div class="benefit-item-title">Mark leave in advance</div>
-              <div class="benefit-item-desc">Patients auto-blocked from booking those days</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">⚡</div>
-            <div>
-              <div class="benefit-item-title">Own schedule per doctor</div>
-              <div class="benefit-item-desc">Each doctor manages independently</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">📊</div>
-            <div>
-              <div class="benefit-item-title">Live booking dashboard</div>
-              <div class="benefit-item-desc">See all bookings anytime, anywhere</div>
-            </div>
-          </div>
+          <div class="benefit-item"><div class="benefit-icon">🩺</div><div><div class="benefit-item-title">Know your day before you arrive</div><div class="benefit-item-desc">Check appointments — decide if worth visiting today</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">🚫</div><div><div class="benefit-item-title">Zero worthless visits — both ways</div><div class="benefit-item-desc">No patient finds doctor absent. No doctor waits for empty slots.</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">🗓️</div><div><div class="benefit-item-title">Mark leave in advance</div><div class="benefit-item-desc">Patients auto-blocked from booking those days</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">⚡</div><div><div class="benefit-item-title">Own schedule per doctor</div><div class="benefit-item-desc">Each doctor manages independently</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">📊</div><div><div class="benefit-item-title">Live booking dashboard</div><div class="benefit-item-desc">See all bookings anytime, anywhere</div></div></div>
         </div>
-
-        <!-- Clinic -->
         <div class="benefit-col">
           <div class="benefit-col-title amber">For Your Clinic</div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🏥</div>
-            <div>
-              <div class="benefit-item-title">Visible to your entire city</div>
-              <div class="benefit-item-desc">All patients can find and book your clinic online</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">👨‍⚕️</div>
-            <div>
-              <div class="benefit-item-title">Multi-doctor support</div>
-              <div class="benefit-item-desc">Any number of doctors, one clinic page</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🔗</div>
-            <div>
-              <div class="benefit-item-title">Shareable booking link</div>
-              <div class="benefit-item-desc">Share on WhatsApp, clinic board, prescription pad</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">💬</div>
-            <div>
-              <div class="benefit-item-title">WhatsApp-based workflow</div>
-              <div class="benefit-item-desc">No extra hardware or software needed</div>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-icon">🔒</div>
-            <div>
-              <div class="benefit-item-title">Full clinic control</div>
-              <div class="benefit-item-desc">Turn visibility on/off, manage all slots anytime</div>
-            </div>
-          </div>
+          <div class="benefit-item"><div class="benefit-icon">🏥</div><div><div class="benefit-item-title">Visible to your entire city</div><div class="benefit-item-desc">All patients can find and book your clinic online</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">👨‍⚕️</div><div><div class="benefit-item-title">Multi-doctor support</div><div class="benefit-item-desc">Any number of doctors, one clinic page</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">🔗</div><div><div class="benefit-item-title">Shareable booking link</div><div class="benefit-item-desc">Share on WhatsApp, clinic board, prescription pad</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">💬</div><div><div class="benefit-item-title">WhatsApp-based workflow</div><div class="benefit-item-desc">No extra hardware or software needed</div></div></div>
+          <div class="benefit-item"><div class="benefit-icon">🔒</div><div><div class="benefit-item-title">Full clinic control</div><div class="benefit-item-desc">Turn visibility on/off, manage all slots anytime</div></div></div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- SPECIALTIES -->
-  <section style="background: var(--slate); padding: 60px 24px;">
+  <section style="background:var(--slate);padding:60px 24px;">
     <div class="section-inner" style="text-align:center;">
       <div class="section-tag" style="display:block;">Ideal For</div>
       <h2 class="section-title" style="margin-bottom:36px;">Every specialty. Every clinic size.</h2>
@@ -620,51 +219,23 @@
     </div>
   </section>
 
-
   <!-- PATIENT BOOKING -->
-  <section id=book style="background: var(--navy); padding: 80px 24px;">
+  <section id="book" style="background:var(--navy);padding:80px 24px;">
     <div class="section-inner" style="text-align:center;">
       <div class="section-tag" style="display:block;">For Patients</div>
       <h2 class="section-title" style="margin-bottom:16px;">Find a doctor.<br>Book in 60 seconds.</h2>
-      <p style="font-size:16px;color:rgba(255,255,255,0.5);max-width:480px;margin:0 auto 40px;line-height:1.7;">
-        No account. No OTP. No phone call. Just pick your doctor, choose a slot, and confirm on WhatsApp.
-      </p>
-
-      <!-- Booking steps inline -->
+      <p style="font-size:16px;color:rgba(255,255,255,0.5);max-width:480px;margin:0 auto 40px;line-height:1.7;">No account. No OTP. No phone call. Just pick your doctor, choose a slot, and confirm on WhatsApp.</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:40px;">
-        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;">
-          <div style="font-size:28px;margin-bottom:10px;">🔍</div>
-          <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Find Clinic</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.4);">Search by city or specialty</div>
-        </div>
+        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;"><div style="font-size:28px;margin-bottom:10px;">🔍</div><div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Find Clinic</div><div style="font-size:12px;color:rgba(255,255,255,0.4);">Search by city or specialty</div></div>
         <div style="display:flex;align-items:center;color:rgba(255,255,255,0.2);font-size:20px;">→</div>
-        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;">
-          <div style="font-size:28px;margin-bottom:10px;">👨‍⚕️</div>
-          <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Pick Doctor</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.4);">See specialty & timings</div>
-        </div>
+        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;"><div style="font-size:28px;margin-bottom:10px;">👨‍⚕️</div><div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Pick Doctor</div><div style="font-size:12px;color:rgba(255,255,255,0.4);">See specialty & timings</div></div>
         <div style="display:flex;align-items:center;color:rgba(255,255,255,0.2);font-size:20px;">→</div>
-        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;">
-          <div style="font-size:28px;margin-bottom:10px;">⏰</div>
-          <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Choose Slot</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.4);">Pick date & exact time</div>
-        </div>
+        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;"><div style="font-size:28px;margin-bottom:10px;">⏰</div><div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Choose Slot</div><div style="font-size:12px;color:rgba(255,255,255,0.4);">Pick date & exact time</div></div>
         <div style="display:flex;align-items:center;color:rgba(255,255,255,0.2);font-size:20px;">→</div>
-        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;">
-          <div style="font-size:28px;margin-bottom:10px;">✅</div>
-          <div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Confirm</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.4);">WhatsApp confirmation sent</div>
-        </div>
+        <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;"><div style="font-size:28px;margin-bottom:10px;">✅</div><div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Confirm</div><div style="font-size:12px;color:rgba(255,255,255,0.4);">WhatsApp confirmation sent</div></div>
       </div>
-
-      <a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=clinic-search"
-         target="_blank"
-         style="display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;padding:16px 36px;border-radius:14px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:all 0.2s;">
-        🏥 Book an Appointment Now
-      </a>
-      <p style="margin-top:16px;font-size:12px;color:rgba(255,255,255,0.3);">
-        Free for patients No registration Works on any phone
-      </p>
+      <a href="/app?page=clinic-search" style="display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;padding:16px 36px;border-radius:14px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:all 0.2s;">🏥 Book an Appointment Now</a>
+      <p style="margin-top:16px;font-size:12px;color:rgba(255,255,255,0.3);">Free for patients &nbsp;·&nbsp; No registration &nbsp;·&nbsp; Works on any phone</p>
     </div>
   </section>
 
@@ -675,34 +246,39 @@
       <h2>Ready to go digital?</h2>
       <p>Register your clinic today. Our team will set everything up and guide you through the process — in Gujarati or English.</p>
       <div class="cta-actions">
-        <a href="https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20register%20my%20clinic%20on%20BookMyClinic" class="btn-whatsapp" target="_blank">
-          💬 WhatsApp to Register
-        </a>
-        <a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=hospital-register" class="btn-primary" target="_blank">
-          Register Online
-        </a>
+        <a href="https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20register%20my%20clinic%20on%20BookMyClinic" class="btn-whatsapp">💬 WhatsApp to Register</a>
+        <a href="/app?page=hospital-register" class="btn-primary">Register Online</a>
       </div>
-      <p style="margin-top:24px;font-size:13px;color:rgba(255,255,255,0.3);">
-        Gujarat, India
-      </p>
+      <p style="margin-top:24px;font-size:13px;color:rgba(255,255,255,0.3);">Gujarat, India</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">
-      <span style="color:#fff">Book</span><span style="color:var(--sky)">My</span><span style="color:#fff">Clinic</span>
-    </div>
+    <div class="footer-logo"><span style="color:#fff">Book</span><span style="color:var(--sky)">My</span><span style="color:#fff">Clinic</span></div>
     <div class="footer-tagline">Smart appointment booking for Gujarat</div>
     <div class="footer-links">
-      <a href="#book">Book Appointment</a><a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=contact" target="_blank">Contact Us</a><a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=careers" target="_blank">Join Our Team</a><a href="#how">How it Works</a>
+      <a href="#book">Book Appointment</a>
+      <a href="/app?page=contact">Contact Us</a>
+      <a href="/app?page=careers">Join Our Team</a>
+      <a href="#how">How it Works</a>
       <a href="#benefits">Benefits</a>
       <a href="#register">Register</a>
-      <a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=clinic-search" target="_blank">Find a Clinic</a>
-      <a href="https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec?page=clinic-portal" target="_blank">Clinic Login</a>
+      <a href="/app?page=clinic-search">Find a Clinic</a>
+      <a href="/app?page=clinic-portal">Clinic Login</a>
     </div>
     <div class="footer-copy">&copy; 2026 BookMyClinic &middot; Gujarat, India</div>
   </footer>
 
+  <script>
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+    if (location.pathname === '/app') {
+      const params = new URLSearchParams(location.search);
+      window.top.location.href = GAS_URL + (params.toString() ? '?' + params.toString() : '');
+    }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+  </script>
 </body>
 </html>
