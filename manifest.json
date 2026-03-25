@@ -1,0 +1,44 @@
+{
+  "name": "BookMyClinic",
+  "short_name": "BookMyClinic",
+  "description": "Find doctors, book appointments, skip the queue",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#1a73e8",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["health", "medical"],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book",
+      "description": "Find a clinic and book now",
+      "url": "/app?page=clinic-search",
+      "icons": [{ "src": "https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Register Clinic",
+      "short_name": "Register",
+      "description": "Register your clinic on BookMyClinic",
+      "url": "/app?page=hospital-register",
+      "icons": [{ "src": "https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
