@@ -22,7 +22,7 @@
 <!-- PWA -->
 <link rel="manifest" href="/manifest.json" />
 <meta name="theme-color" content="#0f172a" />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -101,6 +101,26 @@
     .footer-links a:hover{color:var(--sky);}
     .footer-copy{font-size:12px;color:rgba(255,255,255,0.25);}
     @media(max-width:600px){.hero-actions{flex-direction:column;align-items:center;}.btn-primary,.btn-secondary{width:100%;max-width:300px;text-align:center;}.stats-inner{gap:24px;}.cta-actions{flex-direction:column;align-items:center;}.btn-whatsapp,.btn-primary{width:100%;max-width:300px;justify-content:center;}}
+
+    /* ── WALKTHROUGH STYLES ── */
+    .bmc-backdrop{position:fixed;inset:0;z-index:99997;background:rgba(5,13,26,0.82);backdrop-filter:blur(3px);pointer-events:all;transition:opacity 0.4s;}
+    .bmc-spotlight{position:fixed;z-index:99999;border-radius:14px;box-shadow:0 0 0 9999px rgba(5,13,26,0.82),0 0 0 3px rgba(56,189,248,0.6),0 0 40px rgba(37,99,235,0.4);pointer-events:none;transition:all 0.45s cubic-bezier(0.4,0,0.2,1);background:transparent;}
+    .bmc-tooltip{position:fixed;z-index:100000;background:#0c1829;border:1.5px solid rgba(56,189,248,0.3);border-radius:20px;padding:20px 22px 18px;width:min(320px,calc(100vw - 32px));box-shadow:0 16px 48px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.04);font-family:'Outfit',sans-serif;transition:all 0.35s cubic-bezier(0.4,0,0.2,1);pointer-events:all;}
+    .bmc-tooltip-emoji{font-size:32px;margin-bottom:10px;display:block;animation:bmc-bounce 1.5s ease-in-out infinite alternate;}
+    @keyframes bmc-bounce{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+    .bmc-tooltip-title{font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.4px;margin-bottom:8px;line-height:1.2;}
+    .bmc-tooltip-desc{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:18px;}
+    .bmc-tooltip-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+    .bmc-dots{display:flex;gap:5px;align-items:center;}
+    .bmc-dot{width:6px;height:6px;border-radius:3px;background:rgba(255,255,255,0.2);transition:all 0.3s;}
+    .bmc-dot.active{width:20px;background:linear-gradient(90deg,#2563eb,#38bdf8);}
+    .bmc-next-btn{background:linear-gradient(135deg,#2563eb,#38bdf8);border:none;border-radius:12px;padding:10px 20px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;color:#fff;cursor:pointer;box-shadow:0 4px 16px rgba(37,99,235,0.4);transition:transform 0.15s,box-shadow 0.15s;white-space:nowrap;}
+    .bmc-next-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,0.55);}
+    .bmc-next-btn:active{transform:scale(0.96);}
+    .bmc-skip{font-size:11px;color:rgba(255,255,255,0.25);cursor:pointer;background:none;border:none;font-family:'Outfit',sans-serif;padding:4px 0;transition:color 0.2s;}
+    .bmc-skip:hover{color:rgba(255,255,255,0.5);}
+    .bmc-progress-bar{height:2px;background:rgba(255,255,255,0.07);border-radius:1px;margin-bottom:16px;overflow:hidden;}
+    .bmc-progress-fill{height:100%;background:linear-gradient(90deg,#2563eb,#2dd4bf);border-radius:1px;transition:width 0.4s ease;}
   </style>
 </head>
 <body>
@@ -126,8 +146,8 @@
       <h1>Does every patient<br>in your city know<br><span class="accent">your clinic exists?</span></h1>
       <p class="hero-sub">BookMyClinic puts your clinic on the map — all specialists, timings, and live booking — visible to patients 24x7. Zero wasted visits. Zero missed appointments.</p>
       <div class="hero-actions">
-        <a href="#book" class="btn-primary">Book an Appointment</a>
-        <a href="#register" style="background:rgba(255,255,255,0.07);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.12);">Register Your Clinic</a>
+        <a href="#book" class="btn-primary" id="tour-book">Book an Appointment</a>
+        <a href="#register" id="tour-register" style="background:rgba(255,255,255,0.07);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.12);">Register Your Clinic</a>
         <a href="#how" class="btn-secondary">See How It Works</a>
       </div>
     </div>
@@ -135,7 +155,7 @@
   </section>
 
   <!-- STATS -->
-  <div class="stats-bar">
+  <div class="stats-bar" id="tour-stats">
     <div class="stats-inner">
       <div class="stat"><div class="stat-num">24x7</div><div class="stat-label">Booking Available</div></div>
       <div class="stat"><div class="stat-num">0</div><div class="stat-label">OTP or Registration</div></div>
@@ -150,7 +170,7 @@
       <div class="section-tag">How it works</div>
       <h2 class="section-title">Up and running in 4 steps</h2>
       <p class="section-sub">No technical knowledge needed. If you can use WhatsApp, you can use BookMyClinic.</p>
-      <div class="steps-grid">
+      <div class="steps-grid" id="tour-how">
         <div class="step-card"><div class="step-num">1</div><div class="step-title">Register Free</div><div class="step-desc">Fill a simple form online. Takes 5 minutes. No payment needed to start.</div></div>
         <div class="step-card"><div class="step-num">2</div><div class="step-title">Add Doctors & Timings</div><div class="step-desc">Add each doctor's name, specialty, and weekly schedule from your clinic portal.</div></div>
         <div class="step-card"><div class="step-num">3</div><div class="step-title">Share Your Booking Link</div><div class="step-desc">Share your unique link on WhatsApp, clinic board, or prescription pad.</div></div>
@@ -280,5 +300,196 @@
       navigator.serviceWorker.register('/sw.js').catch(() => {});
     }
   </script>
+
+  <!-- ── DYNAMIC WALKTHROUGH ── -->
+  <script>
+  (function () {
+    'use strict';
+    try { if (localStorage.getItem('bmc_tour_done')) return; } catch (e) { return; }
+
+    var steps = [
+      {
+        targetId: null,
+        position: 'center',
+        emoji:    '👋',
+        title:    'Welcome to BookMyClinic!',
+        desc:     'Let us show you around in 4 quick steps. Takes less than a minute.',
+        btnLabel: 'Start Tour →'
+      },
+      {
+        targetId: 'tour-book',
+        position: 'bottom',
+        emoji:    '🏥',
+        title:    'Book an Appointment',
+        desc:     'Tap here to browse all clinics near you and book a slot instantly — no account, no OTP needed.',
+        btnLabel: 'Next →'
+      },
+      {
+        targetId: 'tour-register',
+        position: 'bottom',
+        emoji:    '🩺',
+        title:    'Register Your Clinic',
+        desc:     'Are you a doctor? Join as a Founding Partner — completely free forever. Takes just 5 minutes.',
+        btnLabel: 'Next →'
+      },
+      {
+        targetId: 'tour-stats',
+        position: 'bottom',
+        emoji:    '✅',
+        title:    'Zero Cost. Zero Friction.',
+        desc:     'Available 24x7. Zero OTP. Zero registration for patients. Zero cost to get started.',
+        btnLabel: 'Next →'
+      },
+      {
+        targetId: 'tour-how',
+        position: 'top',
+        emoji:    '🚀',
+        title:    'Up in 4 Simple Steps',
+        desc:     'Register → Add doctors → Share link → Go live. Patients book, you get WhatsApp confirmation. Done!',
+        btnLabel: "Let's Go! 🎉"
+      }
+    ];
+
+    var current = 0;
+    var total   = steps.length;
+
+    // Create DOM elements
+    var backdrop  = document.createElement('div');
+    backdrop.className = 'bmc-backdrop';
+
+    var spotlight = document.createElement('div');
+    spotlight.className = 'bmc-spotlight';
+    spotlight.style.display = 'none';
+
+    var tooltip = document.createElement('div');
+    tooltip.className = 'bmc-tooltip';
+
+    document.body.appendChild(backdrop);
+    document.body.appendChild(spotlight);
+    document.body.appendChild(tooltip);
+
+    function getDots(idx) {
+      var html = '<div class="bmc-dots">';
+      for (var i = 0; i < total; i++) {
+        html += '<div class="bmc-dot' + (i === idx ? ' active' : '') + '"></div>';
+      }
+      return html + '</div>';
+    }
+
+    function positionTooltip(rect) {
+      var vw  = window.innerWidth;
+      var vh  = window.innerHeight;
+      var ttW = Math.min(320, vw - 32);
+      var ttH = tooltip.offsetHeight || 220;
+      var pad = 16;
+
+      if (!rect) {
+        tooltip.style.top  = Math.round((vh - ttH) / 2) + 'px';
+        tooltip.style.left = Math.round((vw - ttW) / 2) + 'px';
+        return;
+      }
+
+      var step = steps[current];
+      var left = Math.round(rect.left + rect.width / 2 - ttW / 2);
+      left = Math.max(pad, Math.min(left, vw - ttW - pad));
+
+      var top;
+      if (step.position === 'bottom') {
+        top = Math.round(rect.bottom + 16);
+        if (top + ttH > vh - pad) top = Math.round(rect.top - ttH - 16);
+      } else {
+        top = Math.round(rect.top - ttH - 16);
+        if (top < pad) top = Math.round(rect.bottom + 16);
+      }
+      top = Math.max(pad, Math.min(top, vh - ttH - pad));
+
+      tooltip.style.top  = top + 'px';
+      tooltip.style.left = left + 'px';
+    }
+
+    function scrollAndRender(el, rect) {
+      if (!el) { renderTooltip(null); return; }
+      var pad = 120;
+      var inView = rect.top >= pad && rect.bottom <= window.innerHeight - pad;
+      if (inView) { renderTooltip(rect); return; }
+      var targetY = window.scrollY + rect.top - window.innerHeight / 2 + rect.height / 2;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+      setTimeout(function () {
+        var newRect = el.getBoundingClientRect();
+        renderTooltip(newRect);
+      }, 520);
+    }
+
+    function renderTooltip(rect) {
+      var step = steps[current];
+      var pct  = Math.round((current / (total - 1)) * 100);
+      var isLast = current === total - 1;
+
+      // Update spotlight
+      if (rect) {
+        var sp  = spotlight;
+        var pad = 8;
+        sp.style.display = 'block';
+        sp.style.left    = (rect.left - pad) + 'px';
+        sp.style.top     = (rect.top  - pad) + 'px';
+        sp.style.width   = (rect.width  + pad * 2) + 'px';
+        sp.style.height  = (rect.height + pad * 2) + 'px';
+      } else {
+        spotlight.style.display = 'none';
+      }
+
+      tooltip.innerHTML =
+        '<div class="bmc-progress-bar"><div class="bmc-progress-fill" style="width:' + pct + '%"></div></div>' +
+        '<span class="bmc-tooltip-emoji">' + step.emoji + '</span>' +
+        '<div class="bmc-tooltip-title">' + step.title + '</div>' +
+        '<div class="bmc-tooltip-desc">'  + step.desc  + '</div>' +
+        '<div class="bmc-tooltip-footer">' +
+          getDots(current) +
+          '<div style="display:flex;gap:10px;align-items:center;">' +
+            (current > 0 && !isLast ? '<button class="bmc-skip" id="bmcSkip">Skip</button>' : '') +
+            '<button class="bmc-next-btn" id="bmcNext">' + step.btnLabel + '</button>' +
+          '</div>' +
+        '</div>';
+
+      positionTooltip(rect);
+
+      document.getElementById('bmcNext').onclick = function () {
+        if (current < total - 1) { current++; renderStep(); }
+        else finish();
+      };
+      var skipBtn = document.getElementById('bmcSkip');
+      if (skipBtn) skipBtn.onclick = finish;
+    }
+
+    function renderStep() {
+      var step = steps[current];
+      if (!step.targetId) {
+        renderTooltip(null);
+        return;
+      }
+      var el   = document.getElementById(step.targetId);
+      var rect = el ? el.getBoundingClientRect() : null;
+      if (!el || !rect) { renderTooltip(null); return; }
+      scrollAndRender(el, rect);
+    }
+
+    function finish() {
+      try { localStorage.setItem('bmc_tour_done', '1'); } catch (e) {}
+      backdrop.style.opacity  = '0';
+      tooltip.style.opacity   = '0';
+      spotlight.style.opacity = '0';
+      setTimeout(function () {
+        backdrop.remove();
+        tooltip.remove();
+        spotlight.remove();
+      }, 400);
+    }
+
+    window.addEventListener('resize', function () { renderStep(); });
+
+    setTimeout(function () { renderStep(); }, 900);
+  })();
+  </script>
+
 </body>
 </html>
