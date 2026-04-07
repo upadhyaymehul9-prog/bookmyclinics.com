@@ -102,27 +102,6 @@
     .footer-copy{font-size:12px;color:rgba(255,255,255,0.25);}
     @media(max-width:600px){.hero-actions{flex-direction:column;align-items:center;}.btn-primary,.btn-secondary{width:100%;max-width:300px;text-align:center;}.stats-inner{gap:24px;}.cta-actions{flex-direction:column;align-items:center;}.btn-whatsapp,.btn-primary{width:100%;max-width:300px;justify-content:center;}}
 
-    /* ── LIVE CLINICS SECTION ── */
-    #live-clinics{background:var(--navy);padding:70px 24px;}
-    .clinics-header{text-align:center;margin-bottom:36px;}
-    .clinics-count-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);padding:6px 16px;border-radius:99px;font-size:12px;font-weight:700;color:#4ade80;margin-bottom:16px;}
-    .clinics-count-badge .live-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite;}
-    .clinics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;max-width:960px;margin:0 auto;}
-    .clinic-card{background:var(--slate);border:1px solid rgba(255,255,255,0.07);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;cursor:pointer;text-decoration:none;color:inherit;}
-    .clinic-card:hover{transform:translateY(-3px);border-color:rgba(37,99,235,0.5);box-shadow:0 8px 32px rgba(37,99,235,0.15);}
-    .clinic-card-top{display:flex;align-items:flex-start;gap:12px;}
-    .clinic-avatar{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(37,99,235,0.3),rgba(13,148,136,0.3));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;border:1px solid rgba(37,99,235,0.2);}
-    .clinic-name{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;line-height:1.3;margin-bottom:3px;}
-    .clinic-specialty{font-size:11px;color:var(--sky);font-weight:600;}
-    .clinic-city{font-size:11px;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:4px;}
-    .clinic-book-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;transition:background 0.2s;margin-top:4px;border:none;cursor:pointer;width:100%;}
-    .clinic-book-btn:hover{background:#1d4ed8;}
-    .clinics-skeleton{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;max-width:960px;margin:0 auto;}
-    .skeleton-card{background:var(--slate);border:1px solid rgba(255,255,255,0.07);border-radius:18px;padding:20px;height:140px;position:relative;overflow:hidden;}
-    .skeleton-card::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);animation:shimmer 1.5s infinite;}
-    @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-    .clinics-error{text-align:center;color:rgba(255,255,255,0.4);font-size:14px;padding:40px;}
-
     /* ── WALKTHROUGH STYLES ── */
     .bmc-backdrop{position:fixed;inset:0;z-index:99997;background:rgba(5,13,26,0.82);backdrop-filter:blur(3px);pointer-events:all;transition:opacity 0.4s;}
     .bmc-spotlight{position:fixed;z-index:99999;border-radius:14px;box-shadow:0 0 0 9999px rgba(5,13,26,0.82),0 0 0 3px rgba(56,189,248,0.6),0 0 40px rgba(37,99,235,0.4);pointer-events:none;transition:all 0.45s cubic-bezier(0.4,0,0.2,1);background:transparent;}
@@ -153,7 +132,7 @@
       <span><span style="color:#fff">Book</span><span style="color:#38bdf8">My</span><span style="color:#fff">Clinic</span></span>
     </a>
     <div style="display:flex;gap:16px;align-items:center;">
-      <a href="#live-clinics" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Book</a>
+      <a href="#book" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Book</a>
       <a href="/app?page=contact" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Contact</a>
       <a href="/app?page=careers" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);text-decoration:none;">Careers</a>
       <a href="#register" class="nav-cta">For Clinics</a>
@@ -167,7 +146,7 @@
       <h1>Does every patient<br>in your city know<br><span class="accent">your clinic exists?</span></h1>
       <p class="hero-sub">BookMyClinic puts your clinic on the map — all specialists, timings, and live booking — visible to patients 24x7. Zero wasted visits. Zero missed appointments.</p>
       <div class="hero-actions">
-        <a href="#live-clinics" class="btn-primary" id="tour-book">Book an Appointment</a>
+        <a href="#book" class="btn-primary" id="tour-book">Book an Appointment</a>
         <a href="#register" id="tour-register" style="background:rgba(255,255,255,0.07);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.12);">Register Your Clinic</a>
         <a href="#how" class="btn-secondary">See How It Works</a>
       </div>
@@ -184,35 +163,6 @@
       <div class="stat"><div class="stat-num">5 min</div><div class="stat-label">Setup Time</div></div>
     </div>
   </div>
-
-  <!-- LIVE CLINICS -->
-  <section id="live-clinics">
-    <div class="section-inner">
-      <div class="clinics-header">
-        <div class="clinics-count-badge"><span class="live-dot"></span><span id="clinics-count-text">Loading clinics...</span></div>
-        <h2 class="section-title" style="margin-bottom:8px;">Book a Clinic Near You</h2>
-        <p style="font-size:15px;color:rgba(255,255,255,0.5);max-width:460px;margin:0 auto;">No account. No OTP. Pick a clinic, choose your slot, done.</p>
-      </div>
-      <!-- Skeleton loader -->
-      <div class="clinics-skeleton" id="clinics-skeleton">
-        <div class="skeleton-card"></div>
-        <div class="skeleton-card"></div>
-        <div class="skeleton-card"></div>
-        <div class="skeleton-card"></div>
-        <div class="skeleton-card"></div>
-        <div class="skeleton-card"></div>
-      </div>
-      <!-- Actual clinic cards -->
-      <div class="clinics-grid" id="clinics-grid" style="display:none;"></div>
-      <div class="clinics-error" id="clinics-error" style="display:none;">Unable to load clinics right now. <a href="/app?page=clinic-search" style="color:var(--sky);">Try searching manually →</a></div>
-      <!-- View all -->
-      <div style="text-align:center;margin-top:28px;">
-        <a href="/app?page=clinic-search" style="display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.3);color:var(--sky);padding:12px 24px;border-radius:12px;font-size:14px;font-weight:600;text-decoration:none;transition:all 0.2s;" id="tour-clinics">
-          🔍 Browse All Clinics →
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- HOW IT WORKS -->
   <section id="how">
@@ -304,7 +254,7 @@
         <div style="display:flex;align-items:center;color:rgba(255,255,255,0.2);font-size:20px;">→</div>
         <div style="background:var(--slate);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:20px 24px;min-width:160px;flex:1;max-width:200px;"><div style="font-size:28px;margin-bottom:10px;">✅</div><div style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;margin-bottom:4px;">Confirm</div><div style="font-size:12px;color:rgba(255,255,255,0.4);">WhatsApp confirmation sent</div></div>
       </div>
-      <a href="#live-clinics" style="display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;padding:16px 36px;border-radius:14px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:all 0.2s;">🏥 Book an Appointment Now</a>
+      <a href="/app?page=clinic-search" style="display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;padding:16px 36px;border-radius:14px;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(37,99,235,0.4);transition:all 0.2s;">🏥 Book an Appointment Now</a>
       <p style="margin-top:16px;font-size:12px;color:rgba(255,255,255,0.3);">Free for patients &nbsp;·&nbsp; No registration &nbsp;·&nbsp; Works on any phone</p>
     </div>
   </section>
@@ -328,7 +278,7 @@
     <div class="footer-logo"><span style="color:#fff">Book</span><span style="color:var(--sky)">My</span><span style="color:#fff">Clinic</span></div>
     <div class="footer-tagline">Smart appointment booking for Gujarat</div>
     <div class="footer-links">
-      <a href="#live-clinics">Book Appointment</a>
+      <a href="#book">Book Appointment</a>
       <a href="/app?page=contact">Contact Us</a>
       <a href="/app?page=careers">Join Our Team</a>
       <a href="#how">How it Works</a>
@@ -342,111 +292,13 @@
 
   <script>
     const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
-
-    // Fix app redirect - use google.script.run pattern via URL redirect
     if (location.pathname === '/app') {
       const params = new URLSearchParams(location.search);
-      const dest = GAS_URL + (params.toString() ? '?' + params.toString() : '');
-      window.location.replace(dest);
+      window.top.location.href = GAS_URL + (params.toString() ? '?' + params.toString() : '');
     }
-
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(() => {});
     }
-
-    // ── LIVE CLINICS LOADER ──
-    const SPECIALTY_ICONS = {
-      'general': '🩺', 'physician': '🩺', 'gp': '🩺',
-      'paediatric': '👶', 'pediatric': '👶', 'child': '👶', 'newborn': '👶',
-      'gynaec': '🤰', 'gynae': '🤰', 'obstetric': '🤰',
-      'dental': '🦷', 'ortho': '🦴', 'eye': '👁️', 'ophthal': '👁️',
-      'diabetol': '🧬', 'diabetes': '🧬', 'endocrin': '🧬',
-      'homeopath': '🌿', 'ayurved': '🌿',
-      'skin': '✨', 'dermat': '✨',
-      'heart': '❤️', 'cardio': '❤️',
-      'neuro': '🧠', 'psych': '🧠',
-      'multi': '🏥', 'hospital': '🏥', 'surgical': '🏥'
-    };
-
-    function getIcon(specialty) {
-      if (!specialty) return '🏥';
-      const s = specialty.toLowerCase();
-      for (const [key, icon] of Object.entries(SPECIALTY_ICONS)) {
-        if (s.includes(key)) return icon;
-      }
-      return '🏥';
-    }
-
-    function renderClinics(clinics) {
-      const grid = document.getElementById('clinics-grid');
-      const skeleton = document.getElementById('clinics-skeleton');
-      const countText = document.getElementById('clinics-count-text');
-
-      skeleton.style.display = 'none';
-
-      if (!clinics || clinics.length === 0) {
-        document.getElementById('clinics-error').style.display = 'block';
-        return;
-      }
-
-      countText.textContent = clinics.length + ' clinics live now';
-      grid.style.display = 'grid';
-
-      grid.innerHTML = clinics.map(c => {
-        const icon = getIcon(c.specialty || c.type || '');
-        const city = c.city || c.location || 'Gujarat';
-        const specialty = c.specialty || c.type || 'General';
-        const name = c.name || c.clinicName || 'Clinic';
-        const hspId = c.hspId || c.id || '';
-        const bookUrl = hspId ? '/app?page=book&hspId=' + encodeURIComponent(hspId) : '/app?page=clinic-search';
-
-        return `
-          <a class="clinic-card" href="${bookUrl}">
-            <div class="clinic-card-top">
-              <div class="clinic-avatar">${icon}</div>
-              <div style="flex:1;min-width:0;">
-                <div class="clinic-name">${name}</div>
-                <div class="clinic-specialty">${specialty}</div>
-              </div>
-            </div>
-            <div class="clinic-city">📍 ${city}</div>
-            <div class="clinic-book-btn">Book Appointment →</div>
-          </a>`;
-      }).join('');
-    }
-
-    // Fetch clinics from GAS
-    function loadClinics() {
-      const timeout = setTimeout(() => {
-        document.getElementById('clinics-skeleton').style.display = 'none';
-        document.getElementById('clinics-error').style.display = 'block';
-      }, 8000);
-
-      fetch(GAS_URL + '?page=get-clinics-list')
-        .then(r => r.json())
-        .then(data => {
-          clearTimeout(timeout);
-          const clinics = data.clinics || data.data || data || [];
-          renderClinics(Array.isArray(clinics) ? clinics : []);
-        })
-        .catch(() => {
-          clearTimeout(timeout);
-          // Fallback: show hardcoded clinics so page is never empty
-          renderClinics([
-            { name: 'Apna Clinic', specialty: 'General Physician', city: 'Ankleshwar', hspId: 'HSP20260223-490' },
-            { name: 'Srushti Hospital', specialty: 'Multi-specialty', city: 'Ankleshwar', hspId: 'HSP20260224-279' },
-            { name: 'MOKSH', specialty: 'General Physician', city: 'Ankleshwar', hspId: 'HSP20260224-511' },
-            { name: 'Holi Care', specialty: 'General Physician', city: 'Ankleshwar', hspId: 'HSP20260225-711' },
-            { name: 'Mangalam Homoeopathy', specialty: 'Homoeopathy', city: 'Ankleshwar', hspId: 'HSP20260306-385' },
-            { name: 'Meera Newborn & Child', specialty: 'Paediatrics', city: 'Ankleshwar', hspId: 'HSP20260306-488' },
-            { name: 'Human Clinic', specialty: 'General Physician', city: 'Ankleshwar', hspId: 'HSP20260309-329' },
-            { name: 'Parekh Hospital', specialty: 'Multi-specialty', city: 'Ankleshwar', hspId: 'HSP20260310-896' },
-            { name: 'Sitaram Clinic', specialty: 'General Physician', city: 'Vadodara', hspId: 'HSP20260315-450' }
-          ]);
-        });
-    }
-
-    loadClinics();
   </script>
 
   <!-- ── DYNAMIC WALKTHROUGH ── -->
@@ -489,11 +341,11 @@
         btnLabel: 'Next →'
       },
       {
-        targetId: 'tour-clinics',
+        targetId: 'tour-how',
         position: 'top',
         emoji:    '🚀',
-        title:    'Real Clinics. Book Now.',
-        desc:     'These are real clinics live on BookMyClinic. Tap any card to book your appointment instantly!',
+        title:    'Up in 4 Simple Steps',
+        desc:     'Register → Add doctors → Share link → Go live. Patients book, you get WhatsApp confirmation. Done!',
         btnLabel: "Let's Go! 🎉"
       }
     ];
@@ -503,9 +355,11 @@
 
     var backdrop  = document.createElement('div');
     backdrop.className = 'bmc-backdrop';
+
     var spotlight = document.createElement('div');
     spotlight.className = 'bmc-spotlight';
     spotlight.style.display = 'none';
+
     var tooltip = document.createElement('div');
     tooltip.className = 'bmc-tooltip';
 
@@ -607,7 +461,10 @@
 
     function renderStep() {
       var step = steps[current];
-      if (!step.targetId) { renderTooltip(null); return; }
+      if (!step.targetId) {
+        renderTooltip(null);
+        return;
+      }
       var el   = document.getElementById(step.targetId);
       var rect = el ? el.getBoundingClientRect() : null;
       if (!el || !rect) { renderTooltip(null); return; }
@@ -627,6 +484,7 @@
     }
 
     window.addEventListener('resize', function () { renderStep(); });
+
     setTimeout(function () { renderStep(); }, 900);
   })();
   </script>
