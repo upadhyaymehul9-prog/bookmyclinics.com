@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://bookmyclinics.com/patient.html" />
+<link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Book doctor appointments online in Gujarat. No OTP, no account, no phone call. Book in 60 seconds.">
+<title>Find a Doctor | BookMyClinics Gujarat</title>
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#0f172a" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --navy:#0f172a; --slate:#1e293b; --blue:#2563eb; --sky:#38bdf8; --green:#10b981; --white:#ffffff; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,23,42,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 0 20px; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-back {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--sky); }
+  .nav-logo { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; }
+  .nav-logo span { color: var(--sky); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 80px 24px 60px; position: relative; overflow: hidden; text-align: center;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(37,99,235,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
+    background-size: 40px 40px; animation: gridMove 20s linear infinite;
+  }
+  @keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(40px)} }
+  .hero::after {
+    content: ''; position: absolute; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 600px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3);
+    padding: 6px 16px; border-radius: 99px; font-size: 12px; font-weight: 600;
+    color: var(--sky); margin-bottom: 24px; animation: fadeUp 0.5s ease both;
+  }
+  .hero h1 {
+    font-family: 'Sora', sans-serif; font-size: clamp(30px,6vw,52px);
+    font-weight: 800; line-height: 1.1; letter-spacing: -1px;
+    margin-bottom: 16px; animation: fadeUp 0.5s 0.1s ease both;
+  }
+  .hero h1 span { color: var(--sky); }
+  .hero-sub {
+    font-size: clamp(14px,2vw,17px); color: rgba(255,255,255,0.55);
+    line-height: 1.7; margin-bottom: 36px; animation: fadeUp 0.5s 0.2s ease both;
+  }
+  .btn-book {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--blue); color: #fff; padding: 16px 36px;
+    border-radius: 14px; font-size: 16px; font-weight: 700;
+    text-decoration: none; box-shadow: 0 4px 24px rgba(37,99,235,0.45);
+    transition: all 0.2s; animation: fadeUp 0.5s 0.3s ease both;
+  }
+  .btn-book:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,99,235,0.55); }
+
+  /* PRIVACY STRIP */
+  .privacy-strip {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    margin-top: 24px; animation: fadeUp 0.5s 0.4s ease both;
+  }
+  .privacy-item {
+    display: flex; align-items: center; gap: 5px;
+    font-size: 12px; color: #4ade80; font-weight: 600;
+    background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2);
+    padding: 5px 12px; border-radius: 99px;
+  }
+
+  /* HOW IT WORKS */
+  section { padding: 70px 24px; }
+  .section-inner { max-width: 700px; margin: 0 auto; }
+  .section-tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--sky); text-transform: uppercase; margin-bottom: 12px; display: block; }
+  .section-title { font-family: 'Sora', sans-serif; font-size: clamp(24px,4vw,34px); font-weight: 800; line-height: 1.2; margin-bottom: 40px; }
+
+  .steps { display: flex; flex-direction: column; gap: 16px; }
+  .step {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: var(--slate); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px; padding: 20px;
+  }
+  .step-num {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--blue);
+    font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .step-title { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .step-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+  /* BENEFITS */
+  #benefits { background: var(--slate); }
+  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 14px; }
+  .benefit {
+    background: var(--navy); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px; padding: 18px;
+  }
+  .benefit-icon { font-size: 22px; margin-bottom: 10px; }
+  .benefit-title { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .benefit-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+  /* CTA */
+  #cta { text-align: center; }
+  .cta-box { max-width: 500px; margin: 0 auto; }
+  .cta-box h2 { font-family: 'Sora', sans-serif; font-size: clamp(22px,4vw,32px); font-weight: 800; margin-bottom: 12px; }
+  .cta-box p { font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: 28px; line-height: 1.6; }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  @media(max-width:500px) { .btn-book { width: 100%; justify-content: center; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-back">← Back</a>
+  <div class="nav-logo">Book<span>My</span>Clinic</div>
+  <div style="width:60px"></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">For Patients · Gujarat, India</div>
+    <h1>Find a doctor.<br><span>Book in 60 seconds.</span></h1>
+    <p class="hero-sub">No account. No OTP. No phone call. Just pick your clinic, choose a slot, and confirm on WhatsApp.</p>
+    <a href="/app?page=clinic-search" class="btn-book">🔍 Find a Doctor Near You</a>
+    <div class="privacy-strip">
+      <div class="privacy-item">✔ No account needed</div>
+      <div class="privacy-item">✔ No OTP</div>
+      <div class="privacy-item">✔ No data stored</div>
+      <div class="privacy-item">✔ No calls from us</div>
+      <div class="privacy-item">✔ Free forever</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="section-inner">
+    <span class="section-tag">How it works</span>
+    <h2 class="section-title">Book in 4 simple steps</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Find Your Clinic</div>
+          <div class="step-desc">Search by city or specialty. See all available doctors, their timings, and leave days — before you leave home.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Pick a Doctor & Slot</div>
+          <div class="step-desc">Choose your doctor, pick an exact date and time that works for you. No guessing, no waiting on hold.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Enter Your Name & Mobile</div>
+          <div class="step-desc">No account creation. No OTP. Just your name and mobile number — we never store or share it.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Get WhatsApp Confirmation</div>
+          <div class="step-desc">Instant booking confirmation sent to your WhatsApp with your Booking ID. Come at your time — minimal waiting.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="section-inner">
+    <span class="section-tag">Why patients love it</span>
+    <h2 class="section-title">Zero wasted trips.<br>Zero waiting.</h2>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="benefit-icon">📋</div>
+        <div class="benefit-title">See all specialists upfront</div>
+        <div class="benefit-desc">Name, specialty, days & timings — all visible before booking</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🏖️</div>
+        <div class="benefit-title">Know leave days in advance</div>
+        <div class="benefit-desc">No wasted trip to find the doctor absent</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">⏱️</div>
+        <div class="benefit-title">Pick exact time slot</div>
+        <div class="benefit-desc">Come at the right time — minimal waiting at clinic</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">📅</div>
+        <div class="benefit-title">Book anytime — 24x7</div>
+        <div class="benefit-desc">No need to call or visit to check availability</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-title">WhatsApp confirmation</div>
+        <div class="benefit-desc">Instant booking ID sent right after you confirm</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🔒</div>
+        <div class="benefit-title">Your privacy protected</div>
+        <div class="benefit-desc">No data stored. No promo messages. No calls from us.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta">
+  <div class="cta-box">
+    <h2>Ready to book?</h2>
+    <p>Find clinics near you.</p>
+    <a href="/app?page=clinic-search" class="btn-book">🔍 Find a Doctor Now</a>
+    <p style="margin-top:16px;font-size:12px;color:rgba(255,255,255,0.25);">Free for patients · No registration · Works on any phone</p>
+  </div>
+</section>
+
+<footer style="background:var(--slate);border-top:1px solid rgba(255,255,255,0.06);padding:24px;text-align:center;">
+  <div style="font-size:12px;color:rgba(255,255,255,0.25);">
+    <a href="/" style="color:rgba(255,255,255,0.3);text-decoration:none;">Home</a> &nbsp;·&nbsp;
+    <a href="/clinic.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">For Clinics</a> &nbsp;·&nbsp;
+    <a href="/app?page=contact" style="color:rgba(255,255,255,0.3);text-decoration:none;">Contact</a><br><br>
+    © 2026 BookMyClinic · Made with ❤️ from India
+  </div>
+</footer>
+
+<script>
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+  if (location.pathname === '/app') {
+    const params = new URLSearchParams(location.search);
+    window.location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
+  }
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
+</script>
+</body>
+</html>

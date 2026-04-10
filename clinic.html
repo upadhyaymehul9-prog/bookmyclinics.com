@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://bookmyclinics.com/clinic.html" />
+<link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Register your clinic on BookMyClinic. Put your clinic on the map. Free for founding partners. Gujarat, India.">
+<title>Register Your Clinic | BookMyClinics Gujarat</title>
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#0f172a" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --navy:#0f172a; --slate:#1e293b; --blue:#2563eb; --sky:#38bdf8; --green:#10b981; --amber:#f59e0b; --teal:#0d9488; --white:#ffffff; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,23,42,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 0 20px; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-back { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--sky); }
+  .nav-logo { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; }
+  .nav-logo span { color: var(--sky); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 80px 24px 60px; position: relative; overflow: hidden; text-align: center;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(37,99,235,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
+    background-size: 40px 40px; animation: gridMove 20s linear infinite;
+  }
+  @keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(40px)} }
+  .hero::after {
+    content: ''; position: absolute; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(13,148,136,0.12) 0%, transparent 70%);
+    top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 640px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3);
+    padding: 6px 16px; border-radius: 99px; font-size: 12px; font-weight: 700;
+    color: var(--amber); margin-bottom: 24px; animation: fadeUp 0.5s ease both;
+  }
+  .hero h1 {
+    font-family: 'Sora', sans-serif; font-size: clamp(28px,6vw,52px);
+    font-weight: 800; line-height: 1.1; letter-spacing: -1px;
+    margin-bottom: 16px; animation: fadeUp 0.5s 0.1s ease both;
+  }
+  .hero h1 span { color: var(--sky); }
+  .hero-sub {
+    font-size: clamp(14px,2vw,17px); color: rgba(255,255,255,0.55);
+    line-height: 1.7; margin-bottom: 36px; animation: fadeUp 0.5s 0.2s ease both;
+  }
+  .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.5s 0.3s ease both; }
+  .btn-whatsapp {
+    display: flex; align-items: center; gap: 10px;
+    background: #25d366; color: #fff; padding: 15px 28px;
+    border-radius: 13px; font-size: 15px; font-weight: 700;
+    text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    transition: all 0.2s;
+  }
+  .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); }
+  .btn-register {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--blue); color: #fff; padding: 15px 28px;
+    border-radius: 13px; font-size: 15px; font-weight: 700;
+    text-decoration: none; box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+    transition: all 0.2s;
+  }
+  .btn-register:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+  /* SECTIONS */
+  section { padding: 70px 24px; }
+  .section-inner { max-width: 700px; margin: 0 auto; }
+  .section-tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--sky); text-transform: uppercase; margin-bottom: 12px; display: block; }
+  .section-title { font-family: 'Sora', sans-serif; font-size: clamp(24px,4vw,34px); font-weight: 800; line-height: 1.2; margin-bottom: 12px; }
+  .section-sub { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 36px; }
+
+  /* WHY BMC */
+  #why { background: var(--slate); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 14px; }
+  .why-card {
+    background: var(--navy); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px; padding: 20px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .why-card:hover { border-color: rgba(37,99,235,0.4); transform: translateY(-2px); }
+  .why-icon { font-size: 24px; margin-bottom: 12px; }
+  .why-title { font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 5px; }
+  .why-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+  /* FOUNDING PARTNER */
+  #founding {
+    background: linear-gradient(135deg, rgba(37,99,235,0.15), rgba(13,148,136,0.1));
+    border-top: 1px solid rgba(37,99,235,0.2);
+    border-bottom: 1px solid rgba(37,99,235,0.2);
+  }
+  .founding-box {
+    background: var(--slate); border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 20px; padding: 32px; text-align: center; max-width: 500px; margin: 0 auto;
+  }
+  .founding-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3);
+    padding: 6px 16px; border-radius: 99px; font-size: 12px; font-weight: 700;
+    color: var(--amber); margin-bottom: 16px;
+  }
+  .founding-box h3 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+  .founding-box p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 24px; }
+  .founding-perks { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; text-align: left; }
+  .perk { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; }
+  .perk-check { color: #4ade80; font-size: 16px; }
+
+  /* SPECIALTIES */
+  .spec-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .spec-tag {
+    background: rgba(37,99,235,0.12); border: 1px solid rgba(37,99,235,0.25);
+    padding: 7px 16px; border-radius: 99px; font-size: 12px; font-weight: 600;
+  }
+
+  /* STEPS */
+  .setup-steps { display: flex; flex-direction: column; gap: 14px; }
+  .setup-step {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: var(--slate); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px; padding: 18px;
+  }
+  .setup-num {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--blue);
+    font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .setup-title { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+  .setup-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  @media(max-width:500px) { .cta-actions { flex-direction: column; } .btn-whatsapp, .btn-register { justify-content: center; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-back">← Back</a>
+  <div class="nav-logo">Book<span>My</span>Clinic</div>
+  <div style="width:60px"></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🏥 For Doctors & Clinics · Gujarat</div>
+    <h1>Put your clinic<br><span>on the map.</span></h1>
+    <p class="hero-sub">Does your patient know if you're available before they leave home? BookMyClinic gives your clinic a live booking page — visible to patients 24x7. Zero wasted visits. Both ways.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20register%20my%20clinic%20on%20BookMyClinic" class="btn-whatsapp">💬 WhatsApp to Register</a>
+      <a href="/app?page=hospital-register" class="btn-register">Register Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BMC -->
+<section id="why">
+  <div class="section-inner">
+    <span class="section-tag">Why BookMyClinic</span>
+    <h2 class="section-title">Better for doctors.<br>Better for clinics.</h2>
+    <p class="section-sub">Every feature is built around one goal — zero worthless visits, both ways.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🩺</div>
+        <div class="why-title">Know your day before you arrive</div>
+        <div class="why-desc">Check appointments — decide if it's worth visiting today</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚫</div>
+        <div class="why-title">Zero worthless visits</div>
+        <div class="why-desc">No patient finds you absent. No empty waiting room.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🗓️</div>
+        <div class="why-title">Mark leave in advance</div>
+        <div class="why-desc">Patients auto-blocked from booking on your leave days</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <div class="why-title">Own schedule per doctor</div>
+        <div class="why-desc">Each doctor manages their own slots independently</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏥</div>
+        <div class="why-title">Visible to your entire city</div>
+        <div class="why-desc">All patients can find and book your clinic online</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👨‍⚕️</div>
+        <div class="why-title">Multi-doctor support</div>
+        <div class="why-desc">Any number of doctors — one clinic page</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔗</div>
+        <div class="why-title">Shareable booking link</div>
+        <div class="why-desc">Share on WhatsApp, clinic board, prescription pad</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📊</div>
+        <div class="why-title">Live booking dashboard</div>
+        <div class="why-desc">See all bookings anytime, anywhere from your phone</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDING PARTNER -->
+<section id="founding">
+  <div class="section-inner" style="text-align:center;">
+    <span class="section-tag" style="display:block;text-align:center;"></span>
+    <h2 class="section-title" style="margin-bottom:32px;">Founding Partner Program</h2>
+    <div class="founding-box">
+      <div class="founding-badge">🎉 Founding Partner — Free Forever</div>
+      <h3>First Few Clinics in Gujarat</h3>
+      <p>Join now and get Founding Partner status — your clinic is free on BookMyClinic forever. No card needed. No hidden charges. Ever.</p>
+      <div class="founding-perks">
+        <div class="perk"><span class="perk-check">✔</span> Free forever — no subscription</div>
+        <div class="perk"><span class="perk-check">✔</span> Setup done by our team</div>
+        <div class="perk"><span class="perk-check">✔</span> Support in Gujarati & English</div>
+        <div class="perk"><span class="perk-check">✔</span> QR poster for your reception</div>
+        <div class="perk"><span class="perk-check">✔</span> Listed on Google Play Store app</div>
+      </div>
+      <div class="cta-actions" style="flex-direction:column;">
+        <a href="https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20register%20my%20clinic%20on%20BookMyClinic" class="btn-whatsapp" style="justify-content:center;">💬 WhatsApp to Register</a>
+        <a href="/app?page=hospital-register" class="btn-register" style="justify-content:center;">Register Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section>
+  <div class="section-inner">
+    <span class="section-tag">Ideal For</span>
+    <h2 class="section-title" style="margin-bottom:24px;">Every specialty.<br>Every clinic size.</h2>
+    <div class="spec-grid">
+      <div class="spec-tag">🦷 Dental</div>
+      <div class="spec-tag">🤰 Gynaecology</div>
+      <div class="spec-tag">🦴 Orthopaedics</div>
+      <div class="spec-tag">👶 Paediatrics</div>
+      <div class="spec-tag">🧬 Diabetology</div>
+      <div class="spec-tag">🩺 General Physician</div>
+      <div class="spec-tag">👁️ Eye Clinic</div>
+      <div class="spec-tag">🌿 Homoeopathy</div>
+      <div class="spec-tag">✨ Skin & Dermatology</div>
+      <div class="spec-tag">🏥 Multi-specialty</div>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP STEPS -->
+<section style="background:var(--slate);">
+  <div class="section-inner">
+    <span class="section-tag">Getting started</span>
+    <h2 class="section-title" style="margin-bottom:12px;">Up and running in 5 minutes</h2>
+    <p class="section-sub">If you can use WhatsApp, you can use BookMyClinic.</p>
+    <div class="setup-steps">
+      <div class="setup-step">
+        <div class="setup-num">1</div>
+        <div>
+          <div class="setup-title">Register Free</div>
+          <div class="setup-desc">Fill a simple form online or WhatsApp us. Takes 5 minutes. No payment needed.</div>
+        </div>
+      </div>
+      <div class="setup-step">
+        <div class="setup-num">2</div>
+        <div>
+          <div class="setup-title">We Set Everything Up</div>
+          <div class="setup-desc">Our team adds your doctors, timings, and specialty. You don't need to do anything technical.</div>
+        </div>
+      </div>
+      <div class="setup-step">
+        <div class="setup-num">3</div>
+        <div>
+          <div class="setup-title">Share Your Booking Link</div>
+          <div class="setup-desc">Share on WhatsApp, display the QR poster at reception, add to prescription pad.</div>
+        </div>
+      </div>
+      <div class="setup-step">
+        <div class="setup-num">4</div>
+        <div>
+          <div class="setup-title">Go Live 24x7</div>
+          <div class="setup-desc">Patients book slots anytime. You get WhatsApp confirmation. Zero phone calls needed.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="text-align:center;">
+  <div style="max-width:500px;margin:0 auto;">
+    <h2 style="font-family:'Sora',sans-serif;font-size:clamp(22px,4vw,32px);font-weight:800;margin-bottom:12px;">Ready to go digital?</h2>
+    <p style="font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:28px;line-height:1.6;">Register your clinic today. Our team will set everything up and guide you — in Gujarati or English.</p>
+    <div class="cta-actions">
+      <a href="https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20register%20my%20clinic%20on%20BookMyClinic" class="btn-whatsapp">💬 WhatsApp to Register</a>
+      <a href="/app?page=hospital-register" class="btn-register">Register Online</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--slate);border-top:1px solid rgba(255,255,255,0.06);padding:24px;text-align:center;">
+  <div style="font-size:12px;color:rgba(255,255,255,0.25);">
+    <a href="/" style="color:rgba(255,255,255,0.3);text-decoration:none;">Home</a> &nbsp;·&nbsp;
+    <a href="/patient.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">For Patients</a> &nbsp;·&nbsp;
+    <a href="/app?page=clinic-portal" style="color:rgba(255,255,255,0.3);text-decoration:none;">Clinic Login</a> &nbsp;·&nbsp;
+    <a href="/app?page=contact" style="color:rgba(255,255,255,0.3);text-decoration:none;">Contact</a><br><br>
+    © 2026 BookMyClinic · Made with ❤️ from India
+  </div>
+</footer>
+
+<script>
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+  if (location.pathname === '/app') {
+    const params = new URLSearchParams(location.search);
+    window.location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
+  }
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
+</script>
+</body>
+</html>
