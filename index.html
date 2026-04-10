@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://bookmyclinics.com/" />
+<link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
+<link rel="shortcut icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BookMyClinics — Book doctor appointments online in Gujarat, India. No OTP, no registration needed.">
+<title>BookMyClinics | Book Doctor Appointments Online in Gujarat, India</title>
+<meta property="og:title" content="BookMyClinics | Book Doctor Appointments Online in Gujarat">
+<meta property="og:description" content="Find verified specialists, check timings and book clinic appointments 24x7 in Gujarat. No OTP, no registration needed.">
+<meta property="og:url" content="https://bookmyclinics.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://bookmyclinics.com/icon-512.png">
+<meta property="og:site_name" content="BookMyClinics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BookMyClinics | Book Doctor Appointments in Gujarat">
+<meta name="twitter:description" content="Book doctor appointments online 24x7 in Gujarat. Zero OTP. Zero registration.">
+<meta name="twitter:image" content="https://bookmyclinics.com/icon-512.png">
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#0f172a" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:#0f172a; --slate:#1e293b; --blue:#2563eb;
+    --sky:#38bdf8; --green:#10b981; --white:#ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(37,99,235,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37,99,235,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: gridMove 20s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(40px)} }
+  body::after {
+    content: '';
+    position: fixed;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    animation: fadeUp 0.5s ease both;
+  }
+  .logo img { width: 48px; height: 48px; border-radius: 12px; }
+  .logo-text { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+  .logo-text span { color: var(--sky); }
+  .tagline { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 32px; animation: fadeUp 0.5s 0.1s ease both; text-align: center; }
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.3);
+    padding: 5px 14px; border-radius: 99px; font-size: 11px; font-weight: 700;
+    color: #4ade80; margin-bottom: 32px; animation: fadeUp 0.5s 0.15s ease both;
+  }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .choices { width: 100%; display: flex; flex-direction: column; gap: 14px; animation: fadeUp 0.5s 0.2s ease both; }
+  .choice-card {
+    display: flex; align-items: center; gap: 16px; padding: 22px;
+    border-radius: 18px; text-decoration: none; color: var(--white);
+    transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden;
+  }
+  .choice-card:hover { transform: translateY(-2px); }
+  .choice-card::after { content: '›'; position: absolute; right: 20px; font-size: 24px; opacity: 0.4; font-weight: 300; }
+  .choice-card.patient {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    box-shadow: 0 8px 32px rgba(37,99,235,0.35);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .choice-card.patient:hover { box-shadow: 0 12px 40px rgba(37,99,235,0.5); }
+  .choice-card.clinic {
+    background: var(--slate); border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .choice-card.clinic:hover { border-color: rgba(56,189,248,0.3); box-shadow: 0 8px 32px rgba(56,189,248,0.1); }
+  .choice-icon {
+    width: 48px; height: 48px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .patient .choice-icon { background: rgba(255,255,255,0.15); }
+  .clinic .choice-icon { background: rgba(37,99,235,0.2); }
+  .choice-text { flex: 1; min-width: 0; }
+  .choice-title { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 3px; }
+  .choice-sub { font-size: 12px; opacity: 0.6; line-height: 1.4; }
+  .or-divider {
+    display: flex; align-items: center; gap: 12px; width: 100%;
+    color: rgba(255,255,255,0.2); font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  }
+  .or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+  .stats {
+    display: flex; width: 100%; margin-top: 28px;
+    background: var(--slate); border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06); overflow: hidden;
+    animation: fadeUp 0.5s 0.3s ease both;
+  }
+  .stat { flex: 1; text-align: center; padding: 14px 8px; border-right: 1px solid rgba(255,255,255,0.06); }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; color: var(--sky); }
+  .stat-label { font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+  .footer { margin-top: 28px; font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; animation: fadeUp 0.5s 0.4s ease both; line-height: 2; }
+  .footer a { color: rgba(255,255,255,0.3); text-decoration: none; }
+  .footer a:hover { color: var(--sky); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+  /* DEMO CLINIC CARD */
+  .demo-section {
+    width: 100%;
+    margin-top: 20px;
+    animation: fadeUp 0.5s 0.25s ease both;
+  }
+  .demo-divider {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.2); font-size: 11px; font-weight: 600;
+    letter-spacing: 1px; margin-bottom: 14px; width: 100%;
+  }
+  .demo-divider::before, .demo-divider::after {
+    content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08);
+  }
+  .demo-card {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(13,148,136,0.15), rgba(37,99,235,0.1));
+    border: 1px solid rgba(13,148,136,0.3);
+    border-radius: 18px; padding: 18px 20px;
+    text-decoration: none; color: var(--white);
+    display: flex; align-items: center; gap: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .demo-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(13,148,136,0.2); }
+  .demo-card::after { content: '›'; position: absolute; right: 18px; font-size: 22px; opacity: 0.4; }
+  .demo-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: rgba(13,148,136,0.2); display: flex;
+    align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .demo-text { flex: 1; }
+  .demo-title { font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+  .demo-sub { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+  .demo-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: rgba(13,148,136,0.2); border: 1px solid rgba(13,148,136,0.3);
+    padding: 3px 10px; border-radius: 99px;
+    font-size: 10px; font-weight: 700; color: #2dd4bf;
+    margin-bottom: 6px;
+  }
+
+
+  /* SMART DEVICE BANNER */
+  .device-banner {
+    display: none;
+    width: 100%;
+    margin-top: 16px;
+    animation: fadeUp 0.5s 0.35s ease both;
+  }
+  .device-banner.show { display: block; }
+  .device-banner-inner {
+    border-radius: 16px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--white);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+  }
+  .device-banner-inner:hover { transform: translateY(-2px); }
+  .device-banner-inner.android {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(56,189,248,0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .device-banner-inner.ios {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .device-banner-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .device-banner-text { flex: 1; }
+  .device-banner-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .device-banner-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.4;
+  }
+  .device-banner-action {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .android .device-banner-action {
+    background: var(--sky);
+    color: var(--navy);
+  }
+  .ios .device-banner-action {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  /* iOS instruction steps */
+  .ios-steps {
+    display: none;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 16px 18px;
+    margin-top: 10px;
+    animation: fadeUp 0.3s ease both;
+  }
+  .ios-steps.show { display: block; }
+  .ios-steps-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--white);
+  }
+  .ios-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+  }
+  .ios-step:last-child { margin-bottom: 0; }
+  .ios-step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-512.png" alt="BookMyClinic">
+      <div class="logo-text">Book<span>My</span>Clinic</div>
+    </div>
+    <div class="tagline">Smart appointment booking</div>
+    <div class="live-badge"><span class="live-dot"></span>Live Booking · Gujarat, India</div>
+    <div class="choices">
+      <a href="/patient.html" class="choice-card patient">
+        <div class="choice-icon">🔍</div>
+        <div class="choice-text">
+          <div class="choice-title">Find a Doctor</div>
+          <div class="choice-sub">Browse clinics & book a slot instantly</div>
+        </div>
+      </a>
+      <div class="or-divider">OR</div>
+      <a href="/clinic.html" class="choice-card clinic">
+        <div class="choice-icon">🏥</div>
+        <div class="choice-text">
+          <div class="choice-title">Register Your Clinic</div>
+          <div class="choice-sub">Founding Partner · Free forever</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="demo-section">
+      <div class="demo-divider">TRY A DEMO</div>
+      <a href="/app?page=demo" class="demo-card">
+        <div class="demo-icon">🏥</div>
+        <div class="demo-text">
+          <div class="demo-badge">✨ Interactive Demo</div>
+          <div class="demo-title">See How Booking Works</div>
+          <div class="demo-sub">Try a live demo — pick a doctor, choose a slot, experience the full flow</div>
+        </div>
+      </a>
+    </div>
+
+
+    <!-- SMART DEVICE BANNER -->
+    <div class="device-banner" id="deviceBanner">
+      <!-- Android: Play Store -->
+      <a class="device-banner-inner android" id="androidBanner"
+         href="https://play.google.com/store/apps/details?id=com.bookmyclinic.app"
+         target="_blank" style="display:none;">
+        <div class="device-banner-icon">🤖</div>
+        <div class="device-banner-text">
+          <div class="device-banner-title">Get the Android App</div>
+          <div class="device-banner-sub">Download BookMyClinic on Google Play</div>
+        </div>
+        <div class="device-banner-action">Install →</div>
+      </a>
+      <!-- iOS: Add to Home Screen -->
+      <div class="device-banner-inner ios" id="iosBanner"
+           onclick="toggleIosSteps()" style="display:none;cursor:pointer;">
+        <div class="device-banner-icon">🍎</div>
+        <div class="device-banner-text">
+          <div class="device-banner-title">Add to Home Screen</div>
+          <div class="device-banner-sub">Use BookMyClinic like a native app</div>
+        </div>
+        <div class="device-banner-action">How? →</div>
+      </div>
+      <!-- iOS Steps (shown on tap) -->
+      <div class="ios-steps" id="iosSteps">
+        <div class="ios-steps-title">📱 Add BookMyClinic to your iPhone</div>
+        <div class="ios-step"><div class="ios-step-num">1</div><span>Open this page in <strong>Safari</strong> browser</span></div>
+        <div class="ios-step"><div class="ios-step-num">2</div><span>Tap the <strong>Share</strong> button (□↑) at the bottom</span></div>
+        <div class="ios-step"><div class="ios-step-num">3</div><span>Scroll down and tap <strong>"Add to Home Screen"</strong></span></div>
+        <div class="ios-step"><div class="ios-step-num">4</div><span>Tap <strong>Add</strong> — done! App icon appears on home screen</span></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-num">24x7</div><div class="stat-label">Booking</div></div>
+      <div class="stat"><div class="stat-num">₹0</div><div class="stat-label">Zero Cost</div></div>
+      <div class="stat"><div class="stat-num">5 min</div><div class="stat-label">Setup</div></div>
+      <div class="stat"><div class="stat-num">No</div><div class="stat-label">OTP / Login</div></div>
+    </div>
+    <div class="footer">
+      <a href="/app?page=clinic-portal">Clinic Login</a> &nbsp;·&nbsp;
+      <a href="/app?page=contact">Contact</a> &nbsp;·&nbsp;
+      <a href="/app?page=careers">Careers</a><br>
+      © 2026 BookMyClinic · Made with ❤️ from India
+    </div>
+  </div>
+  <script>
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+    if (location.pathname === '/app') {
+      const params = new URLSearchParams(location.search);
+      window.location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
+    }
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
+
+    // SMART DEVICE DETECTION
+    (function() {
+      var ua = navigator.userAgent || '';
+      var isIOS = /iPhone|iPad|iPod/i.test(ua);
+      var isAndroid = /Android/i.test(ua);
+      var isInStandaloneMode = window.navigator.standalone === true ||
+                               window.matchMedia('(display-mode: standalone)').matches;
+
+      if (isInStandaloneMode) return; // Already installed — don't show banner
+
+      var banner = document.getElementById('deviceBanner');
+      if (isAndroid) {
+        document.getElementById('androidBanner').style.display = 'flex';
+        banner.classList.add('show');
+      } else if (isIOS) {
+        document.getElementById('iosBanner').style.display = 'flex';
+        banner.classList.add('show');
+      }
+    })();
+
+    function toggleIosSteps() {
+      var steps = document.getElementById('iosSteps');
+      steps.classList.toggle('show');
+    }
+
+  </script>
+</body>
+</html>
