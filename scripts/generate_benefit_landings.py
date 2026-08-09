@@ -677,6 +677,155 @@ BENEFITS = [
         ],
         "source_keys": ["zhao2017", "jrms2023"],
     },
+    {
+        "slug": "increased-revenue",
+        "nav": "Evidence",
+        "title": "Online Booking and Clinic Revenue Capacity | BookMyClinics",
+        "meta": "Peer-reviewed reviews report increased revenue among clinics adopting web-based scheduling, usually through better-filled capacity and fewer wasted slots.",
+        "h1": "Revenue follows filled appointment time",
+        "lead": "Published reviews list increased revenue among reported outcomes of web-based scheduling — typically because clinics waste fewer paid clinician hours on empty chairs.",
+        "cta_primary": ("Become a Founding Member", "https://bookmyclinics.com/landings/lp-founding.html"),
+        "cta_secondary": ("Register your clinic", "https://bookmyclinics.com/clinic.html"),
+        "sections": [
+            {
+                "h2": "What the evidence shows",
+                "p": (
+                    "Zhao and colleagues’ JMIR systematic review of web-based medical appointment systems found that increasing revenue was reported "
+                    "as a positive change for 4 of the 21 systems reviewed. That sits alongside related capacity findings in the same literature: "
+                    "lower no-shows, shorter turnaround to refill late cancellations, and higher utilization of available appointments. "
+                    "Revenue in these studies is not framed as “charge patients more” — it is framed as recovering clinical time that phone-only "
+                    "workflows leave empty."
+                ),
+                "facts": [
+                    "Increasing revenue reported for 4/21 web-based systems (Zhao et al., JMIR 2017).",
+                    "Practice OAS cut unused appointments 22.7% → 10.3% and never-booked slots 8.6% → 1.6% (Frontiers 2025).",
+                    "Tricare / Murray Hill comparisons in JMIR show sharply lower no-shows for web vs phone booking — preserving billable visit capacity.",
+                ],
+            },
+            {
+                "h2": "How empty slots become lost revenue",
+                "p": (
+                    "Every no-show and every never-refilled cancellation is clinician time you still staff for. "
+                    "The Sutter Fast Pass analysis quantified avoided no-shows at system scale and discussed clinical implications of recovering those visits; "
+                    "the JMIR review similarly notes that long waits can push patients to other providers and cause revenue loss. "
+                    "Digital booking attacks both sides: patients are more likely to keep self-chosen times, and open or freed slots stay visible for someone else to take."
+                ),
+                "facts": [
+                    "Long waits can drive patients to other providers and potential revenue loss (JMIR 2017 discussion).",
+                    "Fast Pass acceptors had lower no-show rates than matched comparisons (Martinez et al., 2020).",
+                    "NHS Swiftqueue digital scheduling raised booking completion 82.8% → 93.4% while cutting DNA 12.1% → 3.1%.",
+                ],
+            },
+            {
+                "h2": "How BookMyClinics puts this into practice",
+                "p": (
+                    "BookMyClinics makes your open doctor sessions discoverable to patients across Gujarat, with WhatsApp confirmation so the booking sticks. "
+                    "We do not publish BookMyClinics revenue guarantees — the figures above are from independent studies. "
+                    "The product intent is the same capacity logic those studies describe: fewer empty chairs on days you are already open."
+                ),
+            },
+        ],
+        "source_keys": ["zhao2017", "frontiers2025", "sutter2020", "swiftqueue2024"],
+    },
+    {
+        "slug": "lower-operating-cost",
+        "nav": "Evidence",
+        "title": "Lower Scheduling Operating Costs | BookMyClinics",
+        "meta": "Documented evaluations link digital appointment scheduling with lower administrative burden and reported cost reductions versus manual phone workflows.",
+        "h1": "Cut the cost of getting someone on the calendar",
+        "lead": "Research and operational evaluations associate online scheduling with reduced administrative cost — fewer staff hours per completed booking, and tighter use of already-paid clinic time.",
+        "cta_primary": ("Register online", "https://bookmyclinics.com/clinic.html"),
+        "cta_secondary": ("WhatsApp", "https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20lower%20scheduling%20costs%20with%20BookMyClinics"),
+        "sections": [
+            {
+                "h2": "What the evidence shows",
+                "p": (
+                    "In Zhao et al.’s JMIR review, reducing cost was reported for 3 of 21 web-based appointment systems, while reducing staff labor "
+                    "was the single most-cited benefit (10 of 21). Those two findings travel together: scheduling cost is largely people-time on phones. "
+                    "A 2024 NHS Trust evaluation of Swiftqueue digital appointment management estimated about 20 fewer administrative hours per week "
+                    "versus manual scheduling for plain-film X-ray referrals, alongside large drops in DNA and cancellations. "
+                    "A mammography self-scheduling optimization study likewise reported an approximately 16-fold reduction in specialist scheduling engagement "
+                    "after online booking scaled."
+                ),
+                "facts": [
+                    "Reducing cost reported for 3/21 systems; reducing staff labor for 10/21 (Zhao et al., JMIR 2017).",
+                    "Swiftqueue NHS evaluation: ~20 admin hours/week saved (14,122 referrals analyzed).",
+                    "Mammography OSS optimization: ~16× less patient-access-specialist scheduling engagement (2023 study).",
+                ],
+            },
+            {
+                "h2": "Cost also hides in unused sessions",
+                "p": (
+                    "Frontiers (2025) practice data showed unused appointments falling from 22.7% to 10.3% after online appointment scheduling, "
+                    "with authors noting that reduced variability in unused slots supports more precise personnel planning and can lower staffing costs. "
+                    "Paying staff to sit through empty template time is an operating cost even when no patient fee is collected. "
+                    "Better utilization is therefore a cost story as much as a revenue story."
+                ),
+                "facts": [
+                    "Unused appointments median 22.7% → 10.3% after OAS (Frontiers 2025).",
+                    "Authors link lower unused-slot variability to more precise personnel planning and lower staffing costs (Frontiers 2025).",
+                ],
+            },
+            {
+                "h2": "How BookMyClinics puts this into practice",
+                "p": (
+                    "BookMyClinics shifts routine slot selection to patients while your team keeps control of doctors, leave, and the day list. "
+                    "Founding Members (first 25 clinics) stay free forever on the platform fee — so you are not trading phone labor for a heavy software bill "
+                    "while you prove the workflow. Published hour-and-cost figures above remain independent study results, not BookMyClinics guarantees."
+                ),
+            },
+        ],
+        "source_keys": ["zhao2017", "swiftqueue2024", "wood2023", "frontiers2025"],
+    },
+    {
+        "slug": "clearer-visit-reasons",
+        "nav": "Evidence",
+        "title": "Clearer Visit Reasons with Online Booking | BookMyClinics",
+        "meta": "Peer-reviewed reviews find patients often provide more detailed and candid reasons for visit when booking online versus speaking to a phone scheduler.",
+        "h1": "Better visit details before the patient arrives",
+        "lead": "Documented analyses of web-based scheduling note that self-entered reasons for visit are often more detailed — and that patients may be more candid online about sensitive symptoms.",
+        "cta_primary": ("See patient booking", "https://bookmyclinics.com/patient.html"),
+        "cta_secondary": ("Clinic registration", "https://bookmyclinics.com/landings/lp-register.html"),
+        "sections": [
+            {
+                "h2": "What the evidence shows",
+                "p": (
+                    "Zhao et al.’s JMIR systematic review describes a qualitative advantage of medical self-service booking: "
+                    "patients’ own descriptions of the reason for visit are often more detailed and illuminating than statements captured over the phone. "
+                    "The review also notes that some patients feel uncomfortable or unable to vocalize certain symptoms — for example sexual health concerns — "
+                    "to a scheduler by phone or in person, and may give an untrue statement. When they schedule online by themselves, they tend to be more candid. "
+                    "That is a documented information-quality benefit, not only a convenience benefit."
+                ),
+                "facts": [
+                    "Self-entered visit reasons often more detailed and illuminating (Zhao et al., JMIR 2017).",
+                    "Patients may withhold or misstate sensitive symptoms to phone schedulers (JMIR 2017).",
+                    "Self-scheduling associated with more candid symptom reporting online (JMIR 2017).",
+                ],
+            },
+            {
+                "h2": "Why clearer reasons improve the visit",
+                "p": (
+                    "Front-desk and clinical teams prepare differently when they know whether a slot is a follow-up, a new complaint, or a sensitive concern. "
+                    "Richer pre-visit text supports better rooming, better time allocation, and fewer wrong-appointment-type mismatches — "
+                    "another impact category the JMIR review recorded for web-based systems. "
+                    "Combined with pre-arrival registration and policy review (also documented in the same review), online booking becomes an information channel, not just a calendar click."
+                ),
+                "facts": [
+                    "Reducing wrong appointment type appears among reported impacts in the JMIR 2017 synthesis.",
+                    "Pre-visit forms and policy review online can reduce misunderstandings at arrival (JMIR 2017).",
+                ],
+            },
+            {
+                "h2": "How BookMyClinics puts this into practice",
+                "p": (
+                    "BookMyClinics bookings travel with structured clinic, doctor, and slot details into a WhatsApp confirmation the patient can see and the clinic can act on. "
+                    "That gives reception a clearer starting point than a hurried phone note. "
+                    "As with every evidence page here, the candid-detail findings come from published research on web-based scheduling systems generally."
+                ),
+            },
+        ],
+        "source_keys": ["zhao2017"],
+    },
 ]
 
 
@@ -758,7 +907,7 @@ def render_page(b: dict, idx: int) -> str:
     <p>First 25 clinics become Founding Members on BookMyClinics — free forever.</p>
     <div class="cta-row">
       <a class="btn btn-teal" href="https://bookmyclinics.com/clinic.html">Register Your Clinic</a>
-      <a class="btn btn-ghost" href="./">All 12 evidence pages</a>
+      <a class="btn btn-ghost" href="./">All {len(BENEFITS)} evidence pages</a>
     </div>
   </section>
 
@@ -791,8 +940,8 @@ def render_hub() -> str:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://bookmyclinics.com/landings/benefits/">
-  <title>12 Evidence-Based Benefits of Online Appointment Booking | BookMyClinics</title>
-  <meta name="description" content="Twelve BookMyClinics landing pages on documented benefits of online medical appointment systems, each backed by published research.">
+  <title>{len(BENEFITS)} Evidence-Based Benefits of Online Appointment Booking | BookMyClinics</title>
+  <meta name="description" content="{len(BENEFITS)} BookMyClinics landing pages on documented benefits of online medical appointment systems, each backed by published research.">
   <meta name="theme-color" content="#0f172a">
   <link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -869,7 +1018,7 @@ def render_hub() -> str:
   </nav>
   <main class="hub">
     <div class="hub-brand">Book<span>My</span>Clinics</div>
-    <h1>12 documented benefits of online appointment booking</h1>
+    <h1>{len(BENEFITS)} documented benefits of online appointment booking</h1>
     <p class="hub-lead">Each page explains one benefit using peer-reviewed reviews, meta-analyses, and published clinic or hospital evaluations — with source links. Figures are from independent studies of online booking systems, not BookMyClinics proprietary claims.</p>
     <div class="hub-list">
 {chr(10).join(items)}
@@ -980,21 +1129,30 @@ def patch_sitemap():
 def patch_landings_index():
     path = ROOT / "landings" / "index.html"
     html = path.read_text()
-    if "benefits/" in html:
-        return
-    inject = """
+    n = len(BENEFITS)
+    if "benefits/" not in html:
+        inject = f"""
       <a class="hub-item" href="benefits/">
-        <strong>Evidence library · 12 benefit pages</strong>
+        <strong>Evidence library · {n} benefit pages</strong>
         <span>Documented research on online appointment booking — one landing page per benefit</span>
       </a>"""
-    html = html.replace(
-        '      <a class="hub-item" href="lp-partners.html">',
-        inject + "\n      <a class=\"hub-item\" href=\"lp-partners.html\">",
+        html = html.replace(
+            '      <a class="hub-item" href="lp-partners.html">',
+            inject + "\n      <a class=\"hub-item\" href=\"lp-partners.html\">",
+        )
+    html = re.sub(
+        r"Evidence library · \d+ benefit pages",
+        f"Evidence library · {n} benefit pages",
+        html,
     )
-    # also soften title description
+    html = re.sub(
+        r"a \d+-page evidence library",
+        f"a {n}-page evidence library",
+        html,
+    )
     html = html.replace(
         "Five purpose-built pages for patients, clinics, demo, founding partners, and team growth.",
-        "Funnel pages plus a 12-page evidence library on documented benefits of online appointment booking.",
+        f"Funnel pages plus a {n}-page evidence library on documented benefits of online appointment booking.",
     )
     path.write_text(html)
 
