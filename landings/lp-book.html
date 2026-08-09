@@ -13,8 +13,8 @@
 </head>
 <body>
   <nav>
-    <a class="nav-brand" href="/">Book<span>My</span>Clinics</a>
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-brand" href="https://bookmyclinics.com/">Book<span>My</span>Clinics</a>
+    <a class="nav-link" href="https://bookmyclinics.com/">Home</a>
   </nav>
 
   <header class="hero">
@@ -25,8 +25,8 @@
       <h1>Book a doctor without the waiting-room queue</h1>
       <p>Find nearby clinics, pick a slot, and confirm on WhatsApp — no OTP, no patient signup.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://bookmyclinics.com/app?page=clinic-search">Find a Doctor</a>
-        <a class="btn btn-ghost" href="/landings/lp-demo.html">Try a demo booking</a>
+        <a class="btn btn-primary" href="https://bookmyclinics.com/patient.html">Find a Doctor</a>
+        <a class="btn btn-ghost" href="https://bookmyclinics.com/landings/lp-demo.html">Try a demo booking</a>
       </div>
     </div>
   </header>
@@ -63,25 +63,18 @@
     <h2>Ready when the clinic is open</h2>
     <p>BookMyClinics works on any phone — day or night.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://bookmyclinics.com/app?page=clinic-search">Book Now</a>
+      <a class="btn btn-primary" href="https://bookmyclinics.com/patient.html">Book Now</a>
+      <a class="btn btn-wa" href="https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20book%20a%20doctor%20on%20BookMyClinics">WhatsApp 8511180957</a>
     </div>
   </section>
 
   <footer>
     <div class="footer-links">
-      <a href="/landings/lp-register.html">For Clinics</a> ·
-      <a href="/privacy.html">Privacy</a> ·
-      <a href="/terms.html">Terms</a>
+      <a href="https://bookmyclinics.com/landings/lp-register.html">For Clinics</a> ·
+      <a href="https://bookmyclinics.com/privacy.html">Privacy</a> ·
+      <a href="https://bookmyclinics.com/terms.html">Terms</a>
     </div>
     © 2026 BookMyClinics · Gujarat, India
   </footer>
-
-  <script>
-    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
-    if (location.pathname === '/app' || location.pathname.endsWith('/app')) {
-      const params = new URLSearchParams(location.search);
-      location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
-    }
-  </script>
 </body>
 </html>

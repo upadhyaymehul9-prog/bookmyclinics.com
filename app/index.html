@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opening BookMyClinics…</title>
+  <meta name="theme-color" content="#0f172a">
+  <style>
+    body {
+      margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; text-align: center;
+      padding: 24px;
+    }
+    a { color: #38bdf8; }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Opening BookMyClinics…</p>
+    <p style="font-size:13px;color:#94a3b8">If nothing happens,
+      <a id="fallback" href="https://bookmyclinics.com/">go to the homepage</a>.
+    </p>
+  </div>
+  <script>
+    (function () {
+      var GAS = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+      var q = window.location.search || '';
+      var target = GAS + q;
+      document.getElementById('fallback').href = target;
+      // Prefer top window to reduce Google multi-account /u/1 embed failures
+      try { window.top.location.replace(target); }
+      catch (e) { window.location.replace(target); }
+    })();
+  </script>
+</body>
+</html>

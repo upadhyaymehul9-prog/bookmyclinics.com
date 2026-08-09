@@ -13,8 +13,8 @@
 </head>
 <body>
   <nav>
-    <a class="nav-brand" href="/">Book<span>My</span>Clinics</a>
-    <a class="nav-link" href="/landings/lp-register.html">For Clinics</a>
+    <a class="nav-brand" href="https://bookmyclinics.com/">Book<span>My</span>Clinics</a>
+    <a class="nav-link" href="https://bookmyclinics.com/clinic.html">For Clinics</a>
   </nav>
 
   <header class="hero">
@@ -25,8 +25,8 @@
       <h1>Try the full booking flow in under a minute</h1>
       <p>Pick a demo doctor, hold a slot, and confirm — no real appointment is created.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://bookmyclinics.com/app?page=demo">Launch Demo</a>
-        <a class="btn btn-ghost" href="https://bookmyclinics.com/app?page=hospital-register">Register your clinic</a>
+        <a class="btn btn-primary" href="https://bookmyclinics.com/#demo">Launch Demo</a>
+        <a class="btn btn-ghost" href="https://bookmyclinics.com/clinic.html">Register your clinic</a>
       </div>
     </div>
   </header>
@@ -63,26 +63,18 @@
     <h2>Liked the demo?</h2>
     <p>Bring BookMyClinics to your clinic next.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://bookmyclinics.com/app?page=demo">Start Demo</a>
-      <a class="btn btn-teal" href="https://bookmyclinics.com/app?page=hospital-register">Register Free</a>
+      <a class="btn btn-primary" href="https://bookmyclinics.com/">Open BookMyClinics</a>
+      <a class="btn btn-wa" href="https://wa.me/918511180957?text=Hi%2C%20I%20tried%20the%20BookMyClinics%20demo%20and%20want%20to%20register%20my%20clinic">WhatsApp 8511180957</a>
     </div>
   </section>
 
   <footer>
     <div class="footer-links">
-      <a href="/landings/lp-book.html">For Patients</a> ·
-      <a href="/privacy.html">Privacy</a> ·
-      <a href="/terms.html">Terms</a>
+      <a href="https://bookmyclinics.com/landings/lp-book.html">For Patients</a> ·
+      <a href="https://bookmyclinics.com/privacy.html">Privacy</a> ·
+      <a href="https://bookmyclinics.com/terms.html">Terms</a>
     </div>
     © 2026 BookMyClinics · Gujarat, India
   </footer>
-
-  <script>
-    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
-    if (location.pathname === '/app' || location.pathname.endsWith('/app')) {
-      const params = new URLSearchParams(location.search);
-      location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
-    }
-  </script>
 </body>
 </html>
