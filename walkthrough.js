@@ -31,7 +31,7 @@
       position:       'bottom',
       emoji:          '🩺',
       title:          'Register Your Clinic',
-      desc:           'Are you a doctor? Join as a Founding Partner — completely free forever. 5 minutes to set up.',
+      desc:           'Are you a doctor? First 25 clinics become Founding Members — free forever. 5 minutes to set up.',
       btnLabel:       'Next →'
     },
     {
