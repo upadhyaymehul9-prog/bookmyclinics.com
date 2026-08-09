@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://bookmyclinics.com/landings/lp-demo.html">
+  <title>Try the Booking Demo | BookMyClinics</title>
+  <meta name="description" content="Experience the full BookMyClinics appointment flow — pick a doctor, hold a slot, and complete a demo booking. No real appointment created.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lp.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">Book<span>My</span>Clinics</a>
+    <a class="nav-link" href="/landings/lp-register.html">For Clinics</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-media" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2000&q=80');"></div>
+    <div class="hero-shade" style="background:linear-gradient(180deg, rgba(15,23,42,0.4) 0%, rgba(15,23,42,0.6) 45%, rgba(15,23,42,0.95) 100%), radial-gradient(ellipse at 30% 20%, rgba(37,99,235,0.35), transparent 50%);"></div>
+    <div class="hero-content">
+      <div class="brand-mark">Book<span>My</span>Clinics</div>
+      <h1>Try the full booking flow in under a minute</h1>
+      <p>Pick a demo doctor, hold a slot, and confirm — no real appointment is created.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/app?page=demo">Launch Demo</a>
+        <a class="btn btn-ghost" href="/app?page=hospital-register">Register your clinic</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section alt">
+    <h2>What you’ll experience</h2>
+    <p>The same path your patients use on BookMyClinics.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Live doctor cards</h3>
+          <p>Specialty, schedule, and slot length — just like a real clinic.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Slot hold timer</h3>
+          <p>Feel the 5-minute reservation before confirmation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Instant result</h3>
+          <p>See the success screen clinics get after a booking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Liked the demo?</h2>
+    <p>Bring BookMyClinics to your clinic next.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/app?page=demo">Start Demo</a>
+      <a class="btn btn-teal" href="/app?page=hospital-register">Register Free</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/landings/lp-book.html">For Patients</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/terms.html">Terms</a>
+    </div>
+    © 2026 BookMyClinics · Gujarat, India
+  </footer>
+
+  <script>
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+    if (location.pathname === '/app' || location.pathname.endsWith('/app')) {
+      const params = new URLSearchParams(location.search);
+      location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
+    }
+  </script>
+</body>
+</html>

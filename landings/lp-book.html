@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://bookmyclinics.com/landings/lp-book.html">
+  <title>Book a Doctor Online | BookMyClinics</title>
+  <meta name="description" content="Find clinics and book doctor appointments online in Gujarat. No OTP. No patient registration. BookMyClinics.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lp.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">Book<span>My</span>Clinics</a>
+    <a class="nav-link" href="/">Home</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-media" style="background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80');"></div>
+    <div class="hero-shade"></div>
+    <div class="hero-content">
+      <div class="brand-mark">Book<span>My</span>Clinics</div>
+      <h1>Book a doctor without the waiting-room queue</h1>
+      <p>Find nearby clinics, pick a slot, and confirm on WhatsApp — no OTP, no patient signup.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/app?page=clinic-search">Find a Doctor</a>
+        <a class="btn btn-ghost" href="/landings/lp-demo.html">Try a demo booking</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Three taps to an appointment</h2>
+    <p>Built for patients who want a real slot, not another app account.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Choose a clinic</h3>
+          <p>Browse verified clinics by city and specialty.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Pick doctor &amp; time</h3>
+          <p>See live availability for the next two weeks.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Confirm on WhatsApp</h3>
+          <p>Send your booking details straight to the clinic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Ready when the clinic is open</h2>
+    <p>BookMyClinics works on any phone — day or night.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/app?page=clinic-search">Book Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/landings/lp-register.html">For Clinics</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/terms.html">Terms</a>
+    </div>
+    © 2026 BookMyClinics · Gujarat, India
+  </footer>
+
+  <script>
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+    if (location.pathname === '/app' || location.pathname.endsWith('/app')) {
+      const params = new URLSearchParams(location.search);
+      location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
+    }
+  </script>
+</body>
+</html>

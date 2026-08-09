@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://bookmyclinics.com/landings/lp-register.html">
+  <title>Online Booking for Your Clinic | BookMyClinics</title>
+  <meta name="description" content="Give your clinic 24x7 online appointments. Register on BookMyClinics — doctor schedules, slot holds, WhatsApp confirmations.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lp.css">
+</head>
+<body>
+  <nav>
+    <a class="nav-brand" href="/">Book<span>My</span>Clinics</a>
+    <a class="nav-link" href="/app?page=clinic-portal">Clinic Login</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-media" style="background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=80');"></div>
+    <div class="hero-shade" style="background:linear-gradient(180deg, rgba(15,23,42,0.3) 0%, rgba(15,23,42,0.55) 40%, rgba(15,23,42,0.94) 100%), radial-gradient(ellipse at 80% 20%, rgba(13,148,136,0.28), transparent 50%);"></div>
+    <div class="hero-content">
+      <div class="brand-mark">Book<span>My</span>Clinics</div>
+      <h1>Put your clinic on the booking map</h1>
+      <p>Online appointments, doctor schedules, and WhatsApp confirmations — set up in minutes.</p>
+      <div class="cta-row">
+        <a class="btn btn-teal" href="/app?page=hospital-register">Register Your Clinic</a>
+        <a class="btn btn-ghost" href="/landings/lp-demo.html">See how booking works</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section teal-wash">
+    <h2>Everything your front desk needs</h2>
+    <p>One portal for doctors, leave, and today’s appointments.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num" style="background:rgba(13,148,136,0.2);color:#5eead4;">1</div>
+        <div>
+          <h3>Add doctors</h3>
+          <p>Specialty, credentials, fees, and weekly shifts.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:rgba(13,148,136,0.2);color:#5eead4;">2</div>
+        <div>
+          <h3>Go live</h3>
+          <p>Patients find you and reserve real slots.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:rgba(13,148,136,0.2);color:#5eead4;">3</div>
+        <div>
+          <h3>Manage the day</h3>
+          <p>Cancel, export, and mark leave when needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Start accepting bookings today</h2>
+    <p>BookMyClinics is built for clinics across Gujarat.</p>
+    <div class="cta-row">
+      <a class="btn btn-teal" href="/app?page=hospital-register">Register Online</a>
+      <a class="btn btn-wa" href="https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20register%20my%20clinic%20on%20BookMyClinics">WhatsApp Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/landings/lp-founding.html">Founding Partner</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/terms.html">Terms</a>
+    </div>
+    © 2026 BookMyClinics · Gujarat, India
+  </footer>
+
+  <script>
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxc0773DM514dv_NyBOwdWWqPNzbqHkMIKIz3Ak6i3_-zhs3akbfQB29OGRqF7qBmqRQg/exec';
+    if (location.pathname === '/app' || location.pathname.endsWith('/app')) {
+      const params = new URLSearchParams(location.search);
+      location.replace(GAS_URL + (params.toString() ? '?' + params.toString() : ''));
+    }
+  </script>
+</body>
+</html>
