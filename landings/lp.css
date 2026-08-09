@@ -262,6 +262,7 @@ footer a:hover { color: var(--sky); }
 }
 
 /* benefit landing prose */
+.nav-links { display: flex; gap: 18px; align-items: center; }
 .prose-section .prose p {
   font-size: 16px;
   color: rgba(255,255,255,0.62);
@@ -285,25 +286,26 @@ footer a:hover { color: var(--sky); }
   font-size: 14px;
   line-height: 1.55;
 }
-.sources-section h2 { margin-bottom: 10px; }
-.sources-note {
+.related-section h2 { margin-bottom: 16px; }
+.related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.related-item {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.75);
   font-size: 14px;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.65;
-  max-width: 62ch;
-  margin-bottom: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
-.sources-list {
-  max-width: 62ch;
-  padding-left: 1.2rem;
-  display: grid;
-  gap: 12px;
-  color: rgba(255,255,255,0.55);
-  font-size: 13px;
-  line-height: 1.55;
-}
-.sources-list a {
-  color: var(--sky);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.related-item:hover {
+  border-color: rgba(56,189,248,0.45);
+  background: rgba(56,189,248,0.1);
+  transform: translateY(-1px);
 }
