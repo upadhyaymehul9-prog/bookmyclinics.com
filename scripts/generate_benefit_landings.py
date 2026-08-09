@@ -72,759 +72,532 @@ IMAGES = [
 BENEFITS = [
     {
         "slug": "fewer-no-shows",
-        "nav": "Evidence",
+        "nav": "Benefits",
         "title": "Fewer Missed Appointments | BookMyClinics",
-        "meta": "Peer-reviewed evidence shows online medical appointment booking often reduces no-show rates versus phone scheduling.",
-        "h1": "Fewer missed appointments, documented in research",
-        "lead": "Across published clinic and system studies, web-based booking is repeatedly linked with lower no-show rates than traditional phone booking.",
+        "meta": "Online doctor booking helps clinics cut missed appointments. Patients pick their own time and get a clear confirmation.",
+        "h1": "Fewer missed appointments",
+        "lead": "When patients book online and choose their own time, they are more likely to show up — and less likely to waste a doctor slot.",
         "cta_primary": ("See how clinics go live", "https://bookmyclinics.com/landings/lp-register.html"),
         "cta_secondary": ("Read all benefits", "./"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Missed appointments waste clinic capacity and delay care for other patients. "
-                    "A Journal of Medical Internet Research systematic review of web-based medical appointment systems "
-                    "found that many practices report lower no-show rates after adopting online scheduling. "
-                    "Concrete comparisons in that review include Tricare web scheduling at a 2% no-show rate versus 8% for phone scheduling, "
-                    "and Murray Hill Medical Group reporting under 1% missed web appointments versus about 8% for phone appointments. "
-                    "Other programs in the same review reported large relative reductions — for example, Patient Online (−42%) and "
-                    "Dartmouth-Hitchcock’s messaging-based appointment management (−40%)."
+                    "A missed appointment is an empty chair while the doctor is ready. Phone booking often leads to forgotten times, "
+                    "wrong notes, or patients who never got a clear confirmation. Online booking lets the patient pick a real slot "
+                    "and keep that booking on their phone. Across many clinics and health systems that moved to online booking, "
+                    "missed visits went down — sometimes from around 8% on phone booking to about 1–2% on web booking."
                 ),
                 "facts": [
-                    "Tricare: 2% no-show online vs 8% phone (cited in Zhao et al., JMIR 2017).",
-                    "Murray Hill Medical Group: &lt;1% missed web appointments vs ~8% phone (JMIR 2017 review).",
-                    "Patient Online: 42% reduction in no-shows (Walters et al., cited in JMIR 2017).",
-                    "Meta-analysis of hospital outpatient digital self-scheduling: lower no-show odds (OR 0.70; 95% CI 0.57–0.85).",
+                    "Patients who book online often miss fewer visits than patients who book only by phone.",
+                    "Some clinics saw missed appointments drop by around 40% after online booking.",
+                    "When patients can cancel or change a slot easily, silent no-shows go down.",
                 ],
             },
             {
-                "h2": "More recent practice data",
+                "h2": "Why it works",
                 "p": (
-                    "A 2025 Frontiers in Digital Health study compared online versus offline booking in a medical practice and a university hospital. "
-                    "In the practice setting, the median no-show rate was 1.8% for online bookings versus 5.9% for offline bookings. "
-                    "Separately, an NHS Trust evaluation of a digital appointment platform for plain-film X-ray referrals reported DNA "
-                    "(did-not-attend) rates falling from 12.1% to 3.1% — a 74% reduction — after digital scheduling replaced manual processes. "
-                    "Results can vary by setting: the same Frontiers paper found a different pattern in a referral-heavy university hospital, "
-                    "which is why clinics should treat published figures as evidence of potential, not a guaranteed outcome for every specialty."
+                    "People remember a time they chose themselves. They also get a written confirmation instead of relying on a rushed phone call. "
+                    "If plans change, they can update the booking instead of simply not arriving. That frees the slot for another patient."
                 ),
                 "facts": [
-                    "Practice OAS no-shows: median 1.8% online vs 5.9% offline (Frontiers 2025).",
-                    "NHS Swiftqueue evaluation: DNA 12.1% → 3.1% across 14,122 referrals.",
-                    "Hospital contexts can differ; reminders remained valuable even where OAS alone was less protective.",
+                    "Self-chosen times feel more real to patients.",
+                    "A message confirmation is harder to forget than a verbal note.",
+                    "Easy cancel and reschedule means empty slots can be filled again.",
                 ],
             },
             {
-                "h2": "Why online booking can reduce no-shows",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Researchers do not claim a single magic mechanism. The JMIR review notes that lower no-shows may reflect easier verification, "
-                    "cancellation, and rescheduling — plus a greater sense of ownership when patients choose their own slot. "
-                    "Patient-centric systems that let people move into earlier openings have also been shown to cut missed visits: "
-                    "in a Sutter Health Fast Pass analysis, accepting an earlier slot was associated with a 1.3 percentage-point drop in no-shows "
-                    "(about a 38% relative reduction)."
-                ),
-                "facts": [
-                    "Easier cancel/reschedule access is a leading proposed mechanism (JMIR 2017).",
-                    "Fast Pass acceptors: −1.3 pp no-shows / ~38% relative reduction (Martinez et al., 2020).",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics gives Gujarat clinics a patient-facing booking path with live doctor availability, "
-                    "so patients pick a real slot instead of leaving a phone message. WhatsApp confirmation keeps the booking visible on the patient’s phone. "
-                    "We do not invent BookMyClinics-specific no-show percentages here — the figures above are from independent published studies of online booking systems. "
-                    "The product goal is to give your clinic the same structural advantages those studies describe: chosen times, clear confirmation, and an easy path to change plans."
+                    "Patients find a clinic, pick a doctor and time, and confirm on WhatsApp. Your team still controls doctors, leave, and the day list. "
+                    "Results always depend on how each clinic runs — but the goal is the same: fewer empty chairs on busy days."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "wang2024", "frontiers2025", "sutter2020", "swiftqueue2024"],
     },
     {
         "slug": "less-staff-labor",
-        "nav": "Evidence",
-        "title": "Less Front-Desk Scheduling Labor | BookMyClinics",
-        "meta": "Published reviews find reduced staff labor is the most frequently reported benefit of web-based medical appointment systems.",
+        "nav": "Benefits",
+        "title": "Less Front-Desk Phone Work | BookMyClinics",
+        "meta": "Online booking reduces repetitive phone scheduling so your reception team can focus on patients in the clinic.",
         "h1": "Give your front desk hours back",
-        "lead": "In the peer-reviewed literature, cutting staff labor is the single most commonly reported operational win from web-based scheduling.",
+        "lead": "Every “Tuesday at 5 or Thursday at 11?” call takes staff time. Online booking lets patients pick the slot themselves.",
         "cta_primary": ("Register your clinic", "https://bookmyclinics.com/clinic.html"),
         "cta_secondary": ("Talk on WhatsApp", "https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20reduce%20front-desk%20phone%20load%20with%20BookMyClinics"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Traditional booking depends on phone lines and human schedulers. Every request competes with other calls. "
-                    "Zhao and colleagues’ JMIR systematic review summarized impacts across 21 web-based systems and found "
-                    "“reducing staff labor” was the most cited positive change (10 of 21 systems) — ahead of satisfaction, efficiency, "
-                    "no-show reduction, and wait-time reduction. That does not mean every clinic saves the same number of hours, "
-                    "but it shows labor relief is the benefit researchers see reported most often."
+                    "Phone booking needs a person on every call. When many patients only need a simple slot, that work piles up. "
+                    "Clinics that add online booking often report less scheduling work for staff — it is one of the most common benefits seen "
+                    "after moving bookings online. Some teams saved around 20 staff hours a week on routine booking work after digital scheduling."
                 ),
                 "facts": [
-                    "Reducing staff labor: most-cited impact (10/21 systems) in Zhao et al., JMIR 2017.",
-                    "Phone/in-person booking capacity is limited by scheduler availability and phone lines (JMIR 2017).",
+                    "Less phone scheduling work is one of the most common wins from online booking.",
+                    "Staff spend less time repeating the same availability questions.",
+                    "Routine bookings move online; complex questions can stay on the phone.",
                 ],
             },
             {
-                "h2": "Measured admin-time reductions",
+                "h2": "Why it works",
                 "p": (
-                    "Newer operational evaluations put numbers on that labor shift. An Imperial College Healthcare NHS Trust analysis of "
-                    "Swiftqueue digital appointment management for plain-film X-ray referrals (14,122 referrals) reported roughly "
-                    "20 fewer administrative hours per week versus manual scheduling, alongside large drops in DNA and cancellations. "
-                    "In screening mammography, a 2023 single-institution study reported that optimizing an EHR-tethered online self-scheduling "
-                    "platform produced a 26-fold rise in online bookings and an approximately 16-fold reduction in patient-access-specialist "
-                    "hands-on scheduling engagement for those exams."
+                    "Patients can see open times and choose without waiting on hold. Your team stops being the only path to the calendar. "
+                    "Reception can focus on walk-ins, payments, and patients who truly need human help."
                 ),
                 "facts": [
-                    "Swiftqueue NHS evaluation: ~20 admin hours/week saved; DNA 12.1% → 3.1%.",
-                    "Mammography self-scheduling optimization: ~16× less specialist scheduling engagement (Wood et al., 2023).",
+                    "Self-booking removes the middle step for simple appointments.",
+                    "Phone lines stay freer for urgent or complex calls.",
+                    "Check-in is smoother when the booking already exists.",
                 ],
             },
             {
-                "h2": "Why labor falls when patients self-schedule",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Self-scheduling moves routine slot selection from staff to patients. Orthopedic outpatient research comparing web-based "
-                    "online scheduling with traditional staff scheduling notes greater patient autonomy and less burden on office staff. "
-                    "The JMIR review also observes that when patients complete registration or pre-visit steps online before arrival, "
-                    "check-in workload can fall. Staff time is then available for complex cases, walk-ins, and patients who still prefer to call."
-                ),
-                "facts": [
-                    "Online scheduling described as less burden on office staff (JRMS 2023).",
-                    "Pre-arrival forms/policies online can smooth workflow (JMIR 2017).",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "With BookMyClinics, patients browse clinic and doctor availability online and reserve a slot without holding your phone line. "
-                    "Your team still controls doctors, leave, and daily appointments in the clinic portal — but they spend less time repeating "
-                    "“Tuesday at 5 or Thursday at 11?” on every call. First 25 clinics join as Founding Members and stay free forever."
+                    "BookMyClinics adds an online lane for patients while your clinic portal stays in control of doctors and leave. "
+                    "First 25 clinics become Founding Members and stay free forever."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "swiftqueue2024", "wood2023", "jrms2023"],
     },
     {
         "slug": "shorter-wait-times",
-        "nav": "Evidence",
-        "title": "Shorter Appointment Wait Times | BookMyClinics",
-        "meta": "Documented cases show online appointment systems can cut queueing and improve time-to-appointment offers.",
-        "h1": "Shorter waits — measured in published studies",
-        "lead": "Waiting is a quality signal. Research links web-based booking with shorter queues at registration and faster offered appointments in several documented programs.",
+        "nav": "Benefits",
+        "title": "Shorter Wait Times | BookMyClinics",
+        "meta": "Online booking can cut waiting for a slot and waiting in line to book — patients see open times and reserve faster.",
+        "h1": "Shorter waits to get an appointment",
+        "lead": "Online booking removes the phone queue and shows open times right away, so patients spend less time waiting to book.",
         "cta_primary": ("Book a doctor", "https://bookmyclinics.com/patient.html"),
         "cta_secondary": ("For clinics", "https://bookmyclinics.com/landings/lp-register.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Zhao et al.’s JMIR systematic review lists decreased waiting time among the recurring benefits after clinics adopt "
-                    "web-based scheduling (reported for 6 of 21 systems reviewed). One detailed example in that review is Cao and colleagues’ "
-                    "hospital Web-based Appointment System in China, where average total waiting time fell from 98 minutes to 7 minutes "
-                    "because patients no longer had to queue physically to obtain an appointment. Another UK sexual-health eTriage program "
-                    "raised the share of patients offered an appointment within the required 48-hour window from 48% to 100%."
+                    "Waiting happens twice with old systems: waiting on the phone, then waiting for the next free doctor day. "
+                    "Online booking attacks the first wait — and sometimes the second. In one hospital program, average waiting to get an appointment "
+                    "fell from about 98 minutes in a queue to about 7 minutes when patients booked online instead of standing in line. "
+                    "Other programs got more patients into the right time window because booking no longer depended on a busy desk."
                 ),
                 "facts": [
-                    "Waiting-time improvement cited for 6/21 systems (Zhao et al., JMIR 2017).",
-                    "Chinese hospital WAS: average wait 98 min → 7 min (Cao et al., cited in JMIR 2017).",
-                    "UK eTriage: appointments offered within 48 h rose from 48% → 100% (cited in JMIR 2017).",
+                    "Patients stop waiting on hold just to hear available times.",
+                    "Open slots are visible, so booking can happen in minutes.",
+                    "Freed slots from cancellations can be offered again faster.",
                 ],
             },
             {
-                "h2": "Faster access through self-rescheduling",
+                "h2": "Why it works",
                 "p": (
-                    "Beyond the initial booking queue, digital tools can shorten the wait until the actual visit. "
-                    "A 2024 JMIR retrospective cohort on an EHR-based Fast Pass self-rescheduling tool reported that patients who accepted "
-                    "earlier openings improved their appointment timing by a median of 14 days. That is not “magic marketing speed” — "
-                    "it is unused earlier capacity being offered back to patients who want it."
-                ),
-                "facts": [
-                    "Fast Pass acceptors: median 14-day earlier appointment (Gallo et al., JMIR 2024).",
-                    "Real-time systems make open slots transparent so patients claim them without phone backlog (JMIR 2017).",
-                ],
-            },
-            {
-                "h2": "Why waits shrink",
-                "p": (
-                    "Phone booking creates two waits: waiting on hold for a scheduler, then waiting for an available clinical slot. "
-                    "Real-time online calendars remove the scheduler queue for simple bookings. Same-day or soon slots, when clinics enable them, "
-                    "can further compress request-to-visit time. The JMIR review also notes that late cancellations can be reused more quickly "
-                    "online than through slow phone turnaround — recovering capacity that would otherwise sit empty."
+                    "The calendar is open to the patient. No backlog of phone calls sits between them and a free slot. "
+                    "When someone cancels, that time can show up again for the next patient instead of staying hidden."
                 ),
             },
             {
-                "h2": "How BookMyClinics puts this into practice",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Patients on BookMyClinics see live availability for the next two weeks and pick a slot without standing in a reception queue "
-                    "or waiting through a busy phone hour. Clinics keep control of doctor schedules and leave so the calendar patients see is real. "
-                    "Published wait-time figures above come from independent studies, not from BookMyClinics outcome claims."
+                    "Patients see live availability for the next two weeks and book without standing in a reception queue. "
+                    "Clinics keep doctor schedules accurate so the times patients see are real."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "gallo2024"],
     },
     {
         "slug": "higher-patient-satisfaction",
-        "nav": "Evidence",
-        "title": "Higher Patient Satisfaction with Online Booking | BookMyClinics",
-        "meta": "Systematic reviews and meta-analysis associate digital self-scheduling with improved patient satisfaction.",
-        "h1": "Patients prefer being able to book themselves",
-        "lead": "Satisfaction surveys and pooled analyses repeatedly find that online appointment access is valued — and often improves measured satisfaction.",
+        "nav": "Benefits",
+        "title": "Higher Patient Satisfaction | BookMyClinics",
+        "meta": "Patients like booking on their own time. Online appointments usually feel easier than waiting on a busy clinic phone.",
+        "h1": "Patients are happier when booking is easy",
+        "lead": "People prefer choosing a time on their phone over waiting on hold. Easy booking is a big part of how patients judge a clinic.",
         "cta_primary": ("Try patient booking", "https://bookmyclinics.com/patient.html"),
         "cta_secondary": ("Clinic registration", "https://bookmyclinics.com/clinic.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Patient satisfaction with booking depends on getting the right time with the right provider. "
-                    "Zhao et al. note that multiple satisfaction surveys found web-based appointment scheduling to be an extremely important feature, "
-                    "with most patients saying they would use the service again. In their review of 21 systems, improved satisfaction was the "
-                    "second most frequently reported positive change (7 of 21). A later meta-analysis of digital self-scheduling in hospital "
-                    "outpatient settings estimated substantially higher odds of improved patient satisfaction versus conventional methods "
-                    "(OR 2.83; 95% CI 2.20–3.64)."
+                    "Satisfaction starts before the doctor visit — at the moment someone tries to book. "
+                    "When booking is simple, patients say they would use it again. Many clinics that added online scheduling "
+                    "saw better patient satisfaction scores. The reason is simple: ease of use. Book at night, book on Sunday, "
+                    "pick the slot that fits work and family — without fighting a busy phone line."
                 ),
                 "facts": [
-                    "Improved satisfaction reported for 7/21 systems (Zhao et al., JMIR 2017).",
-                    "Digital self-scheduling meta-analysis: satisfaction OR 2.83 (95% CI 2.20–3.64).",
-                    "Survey literature summarized in JMIR: most patients would use online booking again.",
+                    "Easy online booking is something most patients say they want again.",
+                    "Satisfaction often rises when patients control the time themselves.",
+                    "Booking outside office hours matters for working families.",
                 ],
             },
             {
-                "h2": "What patients say they want",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Convenience and control drive acceptance. The digital self-scheduling meta-analysis reports that patient acceptance increased "
-                    "as digital tools matured and was dominated by perceived ease of use. Orthopedic outpatient research likewise frames online "
-                    "scheduling as increasing patient autonomy: people can book without phone conversations and outside office hours. "
-                    "Satisfaction rises when the booking channel matches how patients already live — on a phone, at night, without waiting on hold."
-                ),
-                "facts": [
-                    "Ease of use dominates acceptance of digital self-scheduling (Wang & Lin meta-analysis).",
-                    "Online scheduling available 24/7 with no phone wait (JRMS 2023 description of system design).",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics is built for the Gujarat patient journey: find a clinic, choose a doctor and time, confirm on WhatsApp — "
-                    "without forcing another app account or OTP maze for a simple booking. Clinics that go live give patients a modern first impression "
-                    "grounded in the same access advantages the literature associates with higher satisfaction."
+                    "BookMyClinics is built for a simple Gujarat patient journey: find a clinic, choose a doctor and time, confirm on WhatsApp — "
+                    "without forcing another heavy app signup for a basic booking."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "wang2024", "jrms2023"],
     },
     {
         "slug": "after-hours-booking",
-        "nav": "Evidence",
-        "title": "24/7 After-Hours Appointment Booking | BookMyClinics",
-        "meta": "Peer-reviewed reviews identify after-hours access as a core advantage of real-time online medical scheduling.",
+        "nav": "Benefits",
+        "title": "24/7 After-Hours Booking | BookMyClinics",
+        "meta": "Patients can book doctor appointments at night and on weekends — not only while your reception phone is open.",
         "h1": "Book when the clinic phone is asleep",
-        "lead": "Real-time online scheduling’s most cited convenience advantage is after-hours access — patients claim open slots anytime, not only while reception is staffed.",
+        "lead": "Online booking works after hours. Patients can reserve a slot at night or on weekends without calling reception.",
         "cta_primary": ("Open evening booking", "https://bookmyclinics.com/patient.html"),
         "cta_secondary": ("Clinic setup", "https://bookmyclinics.com/landings/lp-register.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Phone booking stops when staff leave. Asynchronous email or form requests made at night still wait until schedulers return, "
-                    "and may sit in the same queue as daytime phone calls. The JMIR systematic review states that the most cited benefit of "
-                    "real-time scheduling is after-hour access: available slots are transparent on a web interface, and patients can claim them "
-                    "anytime and anywhere with minimal scheduler intervention. Orthopedic outpatient system descriptions make the same operational point: "
-                    "online scheduling is available 24/7, including weekends, with no phone waiting time."
+                    "Many people decide to see a doctor after work. If your phone is closed, that intent often dies until tomorrow — "
+                    "and tomorrow they may forget or choose another clinic. Real online booking stays open. "
+                    "Patients claim free slots anytime the calendar shows them, without waiting for staff to return."
                 ),
                 "facts": [
-                    "After-hour access is the most cited benefit of real-time scheduling (Zhao et al., JMIR 2017).",
-                    "Asynchronous web requests outside business hours wait until staff return (JMIR 2017).",
-                    "24/7 online scheduling with no phone wait described in JRMS 2023 outpatient study context.",
+                    "After-hours access is one of the biggest practical wins of online booking.",
+                    "Night and weekend booking captures demand your phone hours miss.",
+                    "You do not need night reception staff for simple slot booking.",
                 ],
             },
             {
-                "h2": "Why after-hours access matters clinically",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Working patients often decide to seek care after office phone hours. If the only channel is a busy daytime line, "
-                    "they delay, forget, or choose another provider. Continuous booking converts evening intent into a reserved slot while "
-                    "motivation is high. For clinics, that expands the capture window for demand without paying for overnight reception staff."
-                ),
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics patient booking works on any phone, day or night, against the live calendar your clinic maintains. "
-                    "You still set doctor shifts and leave; patients simply stop depending on your phone hours to reserve care. "
-                    "That is the same structural after-hours advantage documented for real-time web scheduling in the research literature."
+                    "BookMyClinics works on any phone, day or night, against the live calendar your clinic maintains. "
+                    "You set doctor shifts and leave; patients stop depending on phone hours to book care."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "jrms2023"],
     },
     {
         "slug": "patient-choice-control",
-        "nav": "Evidence",
-        "title": "Patient Choice and Control in Scheduling | BookMyClinics",
-        "meta": "Research describes online medical scheduling as more patient-centered, with transparent calendars and broader time choices.",
-        "h1": "Let patients choose the slot that fits real life",
-        "lead": "Web-based booking reframes scheduling as a patient-centered self-service: browse open times, compare options, and decide — instead of accepting the few slots a caller reads aloud.",
+        "nav": "Benefits",
+        "title": "Patient Choice of Appointment Time | BookMyClinics",
+        "meta": "Online booking lets patients browse open times and choose what fits their life — not only the few slots a caller reads aloud.",
+        "h1": "Let patients choose a time that fits real life",
+        "lead": "Online booking shows open slots clearly. Patients pick what works — instead of accepting whatever the phone desk offers first.",
         "cta_primary": ("See live clinic slots", "https://bookmyclinics.com/patient.html"),
         "cta_secondary": ("Register a clinic", "https://bookmyclinics.com/clinic.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Patient-centeredness is one of the Institute of Medicine’s quality aims, and the JMIR review frames web-based medical scheduling "
-                    "as a more patient-centered channel. Most systems present a calendar-like list so patients can select a convenient time from "
-                    "available slots. By contrast, traditional phone booking typically offers only a limited set of times the scheduler mentions. "
-                    "Some platforms also let patients filter physicians by attributes such as background, experience, gender, and reviews. "
-                    "JRMS (2023) similarly emphasizes that online scheduling increases patient autonomy by removing the need to negotiate times by phone."
+                    "On a phone call, patients usually hear two or three options. Online, they can scan the week and choose. "
+                    "That control is a core reason online booking feels fairer and easier. Patients book the doctor and time that fit work, travel, and family — "
+                    "so the appointment is more likely to stick."
                 ),
                 "facts": [
-                    "Web scheduling described as more patient-centered self-service (Zhao et al., JMIR 2017).",
-                    "Calendar UIs let patients browse available slots vs limited verbal options (JMIR 2017).",
-                    "Online scheduling increases patient autonomy (JRMS 2023).",
+                    "A visible calendar gives more real choices than a short phone list.",
+                    "Patients feel more in control of their care when they pick the slot.",
+                    "Better-fit times mean fewer “this day never worked” no-shows.",
                 ],
             },
             {
-                "h2": "Better information when patients write for themselves",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "The same review notes a qualitative clinical upside: in self-service booking, patients’ written reasons for visit are often "
-                    "more detailed. People who feel uncomfortable stating sensitive symptoms to a phone scheduler may be more candid online. "
-                    "That improves triage quality before the visit — another documented dimension of patient-centered access, not just convenience."
-                ),
-                "facts": [
-                    "Self-entered visit reasons often more detailed/illuminating (JMIR 2017).",
-                    "Patients may be more candid online about sensitive symptoms (JMIR 2017).",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "On BookMyClinics, patients choose clinic, doctor, and time from real availability — then send a clear WhatsApp confirmation. "
-                    "That mirrors the patient-choice pattern described in the literature: transparent options, patient decision, less phone negotiation."
+                    "Patients choose clinic, doctor, and time from real availability, then send a clear WhatsApp confirmation. "
+                    "Less negotiation on the phone. More clarity for both sides."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "jrms2023"],
     },
     {
         "slug": "easier-reschedule-cancel",
-        "nav": "Evidence",
-        "title": "Easier Rescheduling and Cancellation | BookMyClinics",
-        "meta": "Studies link easier online cancel/reschedule paths with fewer no-shows and more timely slot recovery.",
-        "h1": "When plans change, the calendar should change too",
-        "lead": "Published analyses connect easy online rescheduling and cancellation with fewer silent no-shows and faster recovery of clinic capacity.",
+        "nav": "Benefits",
+        "title": "Easier Reschedule and Cancel | BookMyClinics",
+        "meta": "When plans change, online booking makes it easier to cancel or move a slot — so another patient can take the time.",
+        "h1": "When plans change, change the booking too",
+        "lead": "If cancelling by phone is hard, patients often just do not come. Easy online changes turn no-shows into open slots again.",
         "cta_primary": ("Clinic tools", "https://bookmyclinics.com/landings/lp-register.html"),
         "cta_secondary": ("WhatsApp", "https://wa.me/918511180957?text=Hi%2C%20I%20want%20online%20rescheduling%20for%20my%20clinic"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "People miss visits because they forget, because the original date no longer works, or because cancelling by phone is hard. "
-                    "The JMIR review proposes that improved ability to verify, cancel, and reschedule is a plausible reason online programs see "
-                    "fewer no-shows. Dartmouth-Hitchcock’s asynchronous messaging service — which let patients request, review, reschedule, and cancel — "
-                    "was associated with a 40% no-show reduction in that review. Sutter Health’s Fast Pass analysis found accepting an earlier slot "
-                    "also facilitated timely cancellation of appointments no longer needed (+1.7 percentage points; about a 9% relative change)."
+                    "Life changes. Kids get sick. Work runs late. If the only way to cancel is calling a busy line, many people skip the call "
+                    "and simply miss the visit. Online booking and messaging make it easier to move or cancel in time. "
+                    "Clinics then get the slot back while there is still a chance to fill it."
                 ),
                 "facts": [
-                    "Easier cancel/reschedule proposed as a no-show reduction mechanism (JMIR 2017).",
-                    "Dartmouth-Hitchcock messaging appointments: −40% no-shows (cited in JMIR 2017).",
-                    "Fast Pass: timely cancellations +1.7 pp when earlier offers accepted (Martinez et al., 2020).",
+                    "Hard cancellations create silent no-shows.",
+                    "Easy reschedule keeps the patient and frees the old slot.",
+                    "Large clinics already run self-reschedule paths at high volume.",
                 ],
             },
             {
-                "h2": "Self-rescheduling at scale",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Large multispecialty practices now run multiple self-schedule and self-reschedule pathways. A 2024 program description "
-                    "from a multisite clinic reported 733,651 successfully self-scheduled completed visits in a single year across seven processes, "
-                    "including patient self-reschedule and automated waitlist self-reschedule paths. The operational lesson is clear: "
-                    "giving patients structured digital ways to move appointments is no longer experimental — it is production infrastructure."
-                ),
-                "facts": [
-                    "733,651 self-scheduled completed visits in 2023 across 7 processes (Northwestern Medicine program paper, 2024).",
-                    "Self-reschedule and waitlist self-reschedule were major secondary pathways in that program.",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics clinic portals support day-of realities: cancellations, exports, and leave when a doctor is unavailable. "
-                    "Patients confirm on WhatsApp so changing a plan starts from a message thread they already use. "
-                    "The research case for easy change-management is strong; our product focus is making that change visible to both clinic and patient."
+                    "Your clinic portal supports day-of needs like cancellations and doctor leave. "
+                    "Patients confirm on WhatsApp, so changing a plan starts from a chat they already use."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "sutter2020", "gallo2024", "northwestern2024"],
     },
     {
         "slug": "better-slot-utilization",
-        "nav": "Evidence",
-        "title": "Better Appointment Slot Utilization | BookMyClinics",
-        "meta": "Practice data show online appointment scheduling can cut unused and never-booked slots and raise calendar utilization.",
-        "h1": "Fill the calendar you already paid for",
-        "lead": "Online booking does not only move demand online — published practice data show it can reduce unused slots and lift utilization of available appointments.",
+        "nav": "Benefits",
+        "title": "Better Use of Doctor Slots | BookMyClinics",
+        "meta": "Online booking helps fill empty and never-booked slots so your clinic calendar works harder.",
+        "h1": "Fill the calendar you already opened",
+        "lead": "Empty slots cost money even when no patient comes. Online booking helps more of your open times get used.",
         "cta_primary": ("Founding Member offer", "https://bookmyclinics.com/landings/lp-founding.html"),
         "cta_secondary": ("Register online", "https://bookmyclinics.com/clinic.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "A 2025 Frontiers in Digital Health study tracked online appointment scheduling in a medical practice. "
-                    "After OAS implementation, unused appointments fell from a median 22.7% to 10.3%, and never-booked appointments fell "
-                    "from 8.6% to 1.6%, increasing utilization of available appointments. The authors also report that as the share of "
-                    "online-booked appointments rose, efficiency gains strengthened — a practical signal that digital booking density matters."
+                    "You pay for clinic hours whether chairs are full or empty. Online booking makes open times easier to find and book. "
+                    "In one medical practice that tracked this carefully, unused appointments fell from about 23% to about 10%, "
+                    "and never-booked openings fell from about 9% to under 2% after online scheduling. "
+                    "That is more of the same calendar actually serving patients."
                 ),
                 "facts": [
-                    "Unused appointments: median 22.7% → 10.3% after OAS (Frontiers 2025 practice data).",
-                    "Never-booked appointments: median 8.6% → 1.6% (Frontiers 2025).",
-                    "Utilization of available appointments increased (p &lt; 0.0001).",
+                    "Unused slots can drop sharply when patients can book online.",
+                    "Never-booked openings shrink when availability is visible.",
+                    "Late cancellations can be refilled faster online than by phone alone.",
                 ],
             },
             {
-                "h2": "Recovering late cancellations",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "The JMIR review explains another utilization pathway: real-time systems can reuse slots released by late cancellations "
-                    "faster than phone-driven turnaround allows. Empty sessions are expensive whether they come from no-shows, "
-                    "unbooked template time, or cancellations that never get refilled. Online visibility is how those holes get filled."
-                ),
-                "facts": [
-                    "Late-cancellation slots can be reused more quickly online than via phone turnaround (JMIR 2017).",
-                    "JMIR review also lists increasing revenue among reported impacts for 4/21 systems — typically via better filled capacity.",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics exposes real doctor availability to patients across the city, so open sessions are discoverable instead of "
-                    "hidden behind a phone tree. Clinics manage leave and daily lists so the template patients see matches the day you intend to run. "
-                    "Utilization figures cited above are from independent practice research, presented so you can judge the opportunity size."
+                    "BookMyClinics shows real doctor availability to patients, so open sessions are discoverable — not hidden behind a phone tree. "
+                    "You manage leave and daily lists so the calendar stays honest."
                 ),
             },
         ],
-        "source_keys": ["frontiers2025", "zhao2017"],
     },
     {
         "slug": "scheduling-efficiency",
-        "nav": "Evidence",
-        "title": "Higher Scheduling Efficiency | BookMyClinics",
-        "meta": "Meta-analysis finds digital self-scheduling associated with markedly higher scheduling efficiency versus conventional methods.",
-        "h1": "Scheduling that scales without adding phone lines",
-        "lead": "Pooled hospital outpatient evidence associates digital self-scheduling with large gains in scheduling efficiency — more completed booking work with less manual bottleneck.",
+        "nav": "Benefits",
+        "title": "More Efficient Scheduling | BookMyClinics",
+        "meta": "Online booking completes more scheduling work with less phone back-and-forth — your calendar fills with fewer bottlenecks.",
+        "h1": "Scheduling that scales without extra phone lines",
+        "lead": "Online booking lets many patients reserve slots at once. Your team handles exceptions — not every single booking call.",
         "cta_primary": ("Start clinic setup", "https://bookmyclinics.com/clinic.html"),
         "cta_secondary": ("See demo path", "https://bookmyclinics.com/landings/lp-demo.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Wang and Lin’s systematic review and meta-analysis of digital self-scheduling in hospital outpatient settings "
-                    "(18 observational studies) reported increased scheduling efficiency with a pooled odds ratio of 4.94 "
-                    "(95% CI 4.54–5.38; p &lt; 0.001) compared with conventional methods. The same analysis found lower no-show odds "
-                    "and higher satisfaction odds. Separately, Zhao et al. grouped related operational gains — optimizing referrals and "
-                    "streamlining operations — under “improving efficiency,” reported for 6 of 21 web-based systems."
+                    "Efficiency here means more bookings finish without a long phone chain. "
+                    "Studies of digital self-booking in outpatient care find much higher scheduling efficiency than old manual methods. "
+                    "In one hospital digital program, the share of bookings completed rose from about 83% to about 93% while missed visits fell. "
+                    "More of the work gets done. Less of it gets stuck."
                 ),
                 "facts": [
-                    "Scheduling efficiency OR 4.94 (95% CI 4.54–5.38) for digital self-scheduling (Wang & Lin).",
-                    "Improving efficiency cited for 6/21 systems (Zhao et al., JMIR 2017).",
-                    "NHS Swiftqueue evaluation also raised booking completion 82.8% → 93.4%.",
+                    "Self-booking finishes routine scheduling without serial phone handling.",
+                    "Staff time shifts to exceptions and in-clinic care.",
+                    "More completed bookings, fewer abandoned phone attempts.",
                 ],
             },
             {
-                "h2": "Efficiency is a system property",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Efficiency here is not a slogan about “working faster.” It means more of the booking workflow completes without "
-                    "serial human handling. When thousands of routine appointments are self-scheduled, staff intervene on exceptions — "
-                    "exactly the pattern described in high-volume self-scheduling programs and in admin-hour reductions from digital platforms."
-                ),
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics standardizes the booking path for multi-clinic Gujarat operations: one patient entry point, "
-                    "clinic-controlled doctor calendars, and WhatsApp confirmation. That is how scheduling efficiency shows up in a real reception — "
-                    "fewer repeated calls for the same slot decision."
+                    "One patient entry point, clinic-controlled calendars, WhatsApp confirmation. "
+                    "That is how scheduling gets cleaner on a real reception desk."
                 ),
             },
         ],
-        "source_keys": ["wang2024", "zhao2017", "swiftqueue2024"],
     },
     {
         "slug": "appointment-reminders",
-        "nav": "Evidence",
-        "title": "Appointment Reminders Reduce No-Shows | BookMyClinics",
-        "meta": "SMS and digital reminders are repeatedly associated with lower no-show rates in peer-reviewed scheduling research.",
+        "nav": "Benefits",
+        "title": "Appointment Reminders | BookMyClinics",
+        "meta": "Reminders help patients remember the visit. Booking plus a message confirmation cuts forgetful no-shows.",
         "h1": "Reminders turn bookings into arrivals",
-        "lead": "Even the best booking channel needs memory support. Controlled and observational evidence shows digital reminders reduce missed visits.",
+        "lead": "People forget. A clear message after booking keeps the visit on their mind until they walk in.",
         "cta_primary": ("WhatsApp clinic setup", "https://wa.me/918511180957?text=Hi%2C%20I%20want%20booking%20reminders%20for%20my%20clinic"),
         "cta_secondary": ("Register online", "https://bookmyclinics.com/clinic.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Forgetting is a classic no-show driver — especially when the gap between booking and visit is long. "
-                    "The Sutter Fast Pass paper summarizes prior work showing SMS reminders reduce no-show rates and increase cancellation rates, "
-                    "which frees slots for other patients. In the 2025 Frontiers study, SMS reminders were among the most effective factors "
-                    "associated with lower hospital no-shows (odds ratio 0.93), alongside regular consultation types. "
-                    "Digital booking platforms often bundle reminders with scheduling; the NHS Swiftqueue evaluation’s large DNA reduction "
-                    "occurred in a digital scheduling and patient-engagement context, not phone-only workflows."
+                    "Even a perfect booking fails if the patient forgets the day. Message reminders are one of the simplest ways to cut missed visits. "
+                    "They also push people who cannot come to cancel earlier — which frees the slot for someone else. "
+                    "Online booking plus a confirmation message is stronger than a phone note alone."
                 ),
                 "facts": [
-                    "SMS reminders linked to fewer no-shows and more timely cancellations (literature summarized in Martinez et al., 2020).",
-                    "Frontiers 2025 hospital analysis: SMS reminders OR 0.93 for no-show reduction.",
-                    "JMIR review notes auto-generated email/message reminders as a no-show mitigation tactic providers can enforce.",
+                    "Reminders reduce forgotten appointments.",
+                    "Early cancels are better than empty chairs.",
+                    "A chat confirmation stays visible on the patient’s phone.",
                 ],
             },
             {
-                "h2": "Booking + reminder is the practical pair",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Online scheduling gets the right slot on the calendar; reminders keep that commitment salient. "
-                    "Frontiers authors explicitly note that OAS provides 24/7 booking, easier rescheduling/cancellation, and enables automated reminders — "
-                    "a combined design for efficiency and access. Clinics that only move booking online without any confirmation channel "
-                    "leave the forgetfulness problem unsolved."
-                ),
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics confirmations travel over WhatsApp — the messaging channel most patients in India already check — "
-                    "so the booking does not disappear into a missed phone note. That aligns with the documented reminder principle: "
-                    "keep the appointment visible until the visit happens."
+                    "BookMyClinics confirmations go over WhatsApp — the app most patients in India already check — "
+                    "so the booking does not disappear into a missed paper note."
                 ),
             },
         ],
-        "source_keys": ["sutter2020", "frontiers2025", "zhao2017", "swiftqueue2024"],
     },
     {
         "slug": "less-phone-bottleneck",
-        "nav": "Evidence",
-        "title": "Escape the Phone-Line Booking Bottleneck | BookMyClinics",
-        "meta": "Research shows traditional appointment access is limited by phone lines and schedulers — online booking removes that queue for routine slots.",
+        "nav": "Benefits",
+        "title": "Less Phone-Line Bottleneck | BookMyClinics",
+        "meta": "When booking only works by phone, busy lines block care even if doctors still have open slots. Online booking adds another door.",
         "h1": "Stop making care wait on a busy signal",
-        "lead": "Documented analyses of traditional booking show access is constrained not only by clinical capacity, but by phone lines and scheduler bandwidth.",
+        "lead": "A full phone line feels like a closed clinic — even when doctors still have free times. Online booking opens a second door.",
         "cta_primary": ("Move bookings online", "https://bookmyclinics.com/landings/lp-register.html"),
         "cta_secondary": ("Patient booking", "https://bookmyclinics.com/patient.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Zhao et al. open their JMIR review with a structural diagnosis: traditional telephone or in-person booking requires scheduler "
-                    "intervention, so timely appointments are limited by available slots and by schedulers and phone lines. "
-                    "Asynchronous web forms that still dump into the same queue as phone calls inherit that backlog. "
-                    "Real-time online systems change the constraint: patients interact with the schedule directly. "
-                    "Operational studies then show the labor shift — for example, mammography self-scheduling optimization with a ~16× drop in "
-                    "specialist scheduling engagement, and NHS digital scheduling cutting about 20 admin hours per week."
+                    "Old booking is limited by how many calls staff can take. Patients give up when the line is busy, "
+                    "even if the doctor calendar still has openings. Online booking removes that choke point for simple appointments. "
+                    "Your phone stays for questions that need a human voice."
                 ),
                 "facts": [
-                    "Phone booking limited by schedulers and phone lines (Zhao et al., JMIR 2017).",
-                    "Async web requests can share the same queue as phone calls (JMIR 2017).",
-                    "Documented admin relief: ~20 hrs/week (Swiftqueue); ~16× less specialist engagement (mammography 2023 study).",
+                    "Phone capacity is not the same as doctor capacity.",
+                    "Online booking clears demand against real open slots.",
+                    "Reception phones become freer for real conversations.",
                 ],
             },
             {
-                "h2": "What patients experience on a saturated line",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "A busy line feels like a closed clinic even when doctors still have open slots. Satisfaction research ties booking success "
-                    "to getting the right time with the right provider; phone congestion blocks that outcome before clinical scarcity does. "
-                    "Online calendars make remaining capacity visible, so demand can clear against real openings instead of abandoning the call."
-                ),
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics adds a parallel booking lane that does not consume your reception phone. "
-                    "Patients who can self-serve do; your staff keep the line for questions that truly need a human. "
-                    "That is the bottleneck redesign the literature describes — not “no phones ever,” but phones no longer being the only door."
+                    "Patients who can self-serve book online. Your staff keep the line for everything else. "
+                    "Not “no phones ever” — just phones no longer being the only door."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "swiftqueue2024", "wood2023"],
     },
     {
         "slug": "smoother-checkin",
-        "nav": "Evidence",
-        "title": "Smoother Check-In with Online Pre-Registration | BookMyClinics",
-        "meta": "Peer-reviewed reviews note online appointment workflows can shift registration and policy review before the visit, smoothing arrival.",
+        "nav": "Benefits",
+        "title": "Smoother Clinic Check-In | BookMyClinics",
+        "meta": "When the booking is clear before arrival, reception spends less time fixing confusion and more time starting the visit.",
         "h1": "Start the visit before the patient walks in",
-        "lead": "Published descriptions of web-based appointment programs show pre-visit forms, policy review, and clearer visit reasons — all of which smooth front-desk workflow on arrival.",
+        "lead": "A clear online booking means reception already knows who is coming, for which doctor, and at what time.",
         "cta_primary": ("Clinic onboarding", "https://bookmyclinics.com/clinic.html"),
         "cta_secondary": ("Benefits index", "./"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "The JMIR systematic review highlights a convenience that is easy to underestimate: patients can fill out registration forms, "
-                    "get pre-screened, and review practice policies online before they show up. Authors note this can smooth workflow and reduce "
-                    "misunderstandings at the desk. JRMS (2023) repeats the same operational logic — patients who schedule themselves can complete "
-                    "registration and pre-screening before arrival, leaving staff with less check-in workload. "
-                    "Separately, self-entered reasons for visit tend to be more detailed than rushed phone statements, which helps the clinical team prepare."
+                    "Walk-in chaos at the desk wastes the first minutes of care. Online booking creates a known appointment before arrival. "
+                    "Many online systems also let patients review basic details ahead of time, so check-in is faster and misunderstandings drop. "
+                    "Reception starts from a real booking — not a vague “I called someone yesterday.”"
                 ),
                 "facts": [
-                    "Pre-visit registration/policy review online can smooth workflow (Zhao et al., JMIR 2017).",
-                    "Self-scheduling associated with less check-in workload when forms are completed ahead (JRMS 2023, citing Zhao).",
-                    "Self-described visit reasons often more detailed than phone statements (JMIR 2017).",
+                    "Known bookings make lobby flow calmer.",
+                    "Less paperwork panic at peak hours.",
+                    "Staff help the visit start, not rebuild the appointment from scratch.",
                 ],
             },
             {
-                "h2": "Arrival quality is part of access",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Access is not only “got a slot.” It is also whether the first ten minutes of the visit are spent fixing paperwork or starting care. "
-                    "Digital intake attached to online booking moves demographic and policy steps out of peak lobby time. "
-                    "That is why smoother check-in appears in the literature as a companion benefit of web scheduling, not a separate product category."
-                ),
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics captures the booking essentials up front — clinic, doctor, slot, and WhatsApp confirmation — "
-                    "so reception starts from a known appointment instead of a vague walk-in story. "
-                    "As you grow with Founding Member onboarding, our team helps standardize the patient path so arrival matches what the calendar already promised."
+                    "BookMyClinics captures clinic, doctor, slot, and WhatsApp confirmation up front. "
+                    "Arrival matches what the calendar already promised."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "jrms2023"],
     },
     {
         "slug": "increased-revenue",
-        "nav": "Evidence",
-        "title": "Online Booking and Clinic Revenue Capacity | BookMyClinics",
-        "meta": "Peer-reviewed reviews report increased revenue among clinics adopting web-based scheduling, usually through better-filled capacity and fewer wasted slots.",
+        "nav": "Benefits",
+        "title": "Protect Clinic Revenue with Online Booking | BookMyClinics",
+        "meta": "Online booking helps clinics earn more from the same open hours by filling empty slots and cutting missed visits — not by raising fees.",
         "h1": "Revenue follows filled appointment time",
-        "lead": "Published reviews list increased revenue among reported outcomes of web-based scheduling — typically because clinics waste fewer paid clinician hours on empty chairs.",
+        "lead": "You do not need higher fees to earn more. You need fewer empty chairs when the doctor is already there.",
         "cta_primary": ("Become a Founding Member", "https://bookmyclinics.com/landings/lp-founding.html"),
         "cta_secondary": ("Register your clinic", "https://bookmyclinics.com/clinic.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Zhao and colleagues’ JMIR systematic review of web-based medical appointment systems found that increasing revenue was reported "
-                    "as a positive change for 4 of the 21 systems reviewed. That sits alongside related capacity findings in the same literature: "
-                    "lower no-shows, shorter turnaround to refill late cancellations, and higher utilization of available appointments. "
-                    "Revenue in these studies is not framed as “charge patients more” — it is framed as recovering clinical time that phone-only "
-                    "workflows leave empty."
+                    "Clinic income sits in used doctor time. Missed visits and never-filled openings leave paid hours empty. "
+                    "Online booking helps in three simple ways: fewer no-shows, faster refill of cancelled times, and more of your open slots actually getting booked. "
+                    "In practice data, unused appointments have fallen from about 23% to about 10%, and never-booked openings from about 9% to under 2%, "
+                    "after online scheduling. That is recovered capacity — the same clinic hours doing more work."
                 ),
                 "facts": [
-                    "Increasing revenue reported for 4/21 web-based systems (Zhao et al., JMIR 2017).",
-                    "Practice OAS cut unused appointments 22.7% → 10.3% and never-booked slots 8.6% → 1.6% (Frontiers 2025).",
-                    "Tricare / Murray Hill comparisons in JMIR show sharply lower no-shows for web vs phone booking — preserving billable visit capacity.",
+                    "Fewer missed visits protect billable doctor time.",
+                    "Visible open slots get filled instead of staying empty.",
+                    "Cancelled times can return to the calendar quickly.",
                 ],
             },
             {
-                "h2": "How empty slots become lost revenue",
+                "h2": "How empty slots become lost money",
                 "p": (
-                    "Every no-show and every never-refilled cancellation is clinician time you still staff for. "
-                    "The Sutter Fast Pass analysis quantified avoided no-shows at system scale and discussed clinical implications of recovering those visits; "
-                    "the JMIR review similarly notes that long waits can push patients to other providers and cause revenue loss. "
-                    "Digital booking attacks both sides: patients are more likely to keep self-chosen times, and open or freed slots stay visible for someone else to take."
+                    "Staff costs and clinic rent do not pause when a patient does not arrive. "
+                    "Long waits also push patients to other clinics. Online booking shortens the path to a slot and keeps more of your day productive."
                 ),
                 "facts": [
-                    "Long waits can drive patients to other providers and potential revenue loss (JMIR 2017 discussion).",
-                    "Fast Pass acceptors had lower no-show rates than matched comparisons (Martinez et al., 2020).",
-                    "NHS Swiftqueue digital scheduling raised booking completion 82.8% → 93.4% while cutting DNA 12.1% → 3.1%.",
+                    "An empty chair still costs you to keep the clinic open.",
+                    "Patients who cannot book easily may go elsewhere.",
+                    "Better fill rate means better use of the same team.",
                 ],
             },
             {
-                "h2": "How BookMyClinics puts this into practice",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "BookMyClinics makes your open doctor sessions discoverable to patients across Gujarat, with WhatsApp confirmation so the booking sticks. "
-                    "We do not publish BookMyClinics revenue guarantees — the figures above are from independent studies. "
-                    "The product intent is the same capacity logic those studies describe: fewer empty chairs on days you are already open."
+                    "We make your open sessions easy for patients to find and confirm on WhatsApp. "
+                    "No fake promises of a fixed income number — just a clearer path to fewer empty chairs on days you are already open."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "frontiers2025", "sutter2020", "swiftqueue2024"],
     },
     {
         "slug": "lower-operating-cost",
-        "nav": "Evidence",
-        "title": "Lower Scheduling Operating Costs | BookMyClinics",
-        "meta": "Documented evaluations link digital appointment scheduling with lower administrative burden and reported cost reductions versus manual phone workflows.",
+        "nav": "Benefits",
+        "title": "Lower Scheduling Costs | BookMyClinics",
+        "meta": "Online booking lowers the cost of getting patients on the calendar by cutting phone labor and wasted empty sessions.",
         "h1": "Cut the cost of getting someone on the calendar",
-        "lead": "Research and operational evaluations associate online scheduling with reduced administrative cost — fewer staff hours per completed booking, and tighter use of already-paid clinic time.",
+        "lead": "Scheduling by phone only is expensive staff time. Online booking reduces that cost and wastes fewer paid clinic hours.",
         "cta_primary": ("Register online", "https://bookmyclinics.com/clinic.html"),
         "cta_secondary": ("WhatsApp", "https://wa.me/918511180957?text=Hi%2C%20I%20want%20to%20lower%20scheduling%20costs%20with%20BookMyClinics"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "In Zhao et al.’s JMIR review, reducing cost was reported for 3 of 21 web-based appointment systems, while reducing staff labor "
-                    "was the single most-cited benefit (10 of 21). Those two findings travel together: scheduling cost is largely people-time on phones. "
-                    "A 2024 NHS Trust evaluation of Swiftqueue digital appointment management estimated about 20 fewer administrative hours per week "
-                    "versus manual scheduling for plain-film X-ray referrals, alongside large drops in DNA and cancellations. "
-                    "A mammography self-scheduling optimization study likewise reported an approximately 16-fold reduction in specialist scheduling engagement "
-                    "after online booking scaled."
+                    "The cost of booking is mostly people answering phones. When online booking takes the routine slots, "
+                    "clinics need fewer hours of pure scheduling labor — sometimes around 20 hours a week saved on booking admin in published digital programs. "
+                    "There is a second cost too: paying staff through empty sessions. When unused slots fall, your team’s time is spent on real patients."
                 ),
                 "facts": [
-                    "Reducing cost reported for 3/21 systems; reducing staff labor for 10/21 (Zhao et al., JMIR 2017).",
-                    "Swiftqueue NHS evaluation: ~20 admin hours/week saved (14,122 referrals analyzed).",
-                    "Mammography OSS optimization: ~16× less patient-access-specialist scheduling engagement (2023 study).",
+                    "Less phone booking work means lower admin cost per appointment.",
+                    "Fewer empty sessions mean better value from staff already on duty.",
+                    "Online booking scales without adding more phone lines.",
                 ],
             },
             {
-                "h2": "Cost also hides in unused sessions",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Frontiers (2025) practice data showed unused appointments falling from 22.7% to 10.3% after online appointment scheduling, "
-                    "with authors noting that reduced variability in unused slots supports more precise personnel planning and can lower staffing costs. "
-                    "Paying staff to sit through empty template time is an operating cost even when no patient fee is collected. "
-                    "Better utilization is therefore a cost story as much as a revenue story."
-                ),
-                "facts": [
-                    "Unused appointments median 22.7% → 10.3% after OAS (Frontiers 2025).",
-                    "Authors link lower unused-slot variability to more precise personnel planning and lower staffing costs (Frontiers 2025).",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics shifts routine slot selection to patients while your team keeps control of doctors, leave, and the day list. "
-                    "Founding Members (first 25 clinics) stay free forever on the platform fee — so you are not trading phone labor for a heavy software bill "
-                    "while you prove the workflow. Published hour-and-cost figures above remain independent study results, not BookMyClinics guarantees."
+                    "Patients self-serve routine slots. Your team keeps control of doctors and leave. "
+                    "First 25 clinics stay free forever as Founding Members — so you are not swapping phone labor for a heavy software bill while you prove the flow."
                 ),
             },
         ],
-        "source_keys": ["zhao2017", "swiftqueue2024", "wood2023", "frontiers2025"],
     },
     {
         "slug": "clearer-visit-reasons",
-        "nav": "Evidence",
-        "title": "Clearer Visit Reasons with Online Booking | BookMyClinics",
-        "meta": "Peer-reviewed reviews find patients often provide more detailed and candid reasons for visit when booking online versus speaking to a phone scheduler.",
-        "h1": "Better visit details before the patient arrives",
-        "lead": "Documented analyses of web-based scheduling note that self-entered reasons for visit are often more detailed — and that patients may be more candid online about sensitive symptoms.",
+        "nav": "Benefits",
+        "title": "Clearer Visit Details | BookMyClinics",
+        "meta": "Patients often explain their problem more clearly when booking online than when rushed on a phone call.",
+        "h1": "Clearer visit details before the patient arrives",
+        "lead": "Online booking gives patients space to say why they are coming — which helps your team prepare.",
         "cta_primary": ("See patient booking", "https://bookmyclinics.com/patient.html"),
         "cta_secondary": ("Clinic registration", "https://bookmyclinics.com/landings/lp-register.html"),
         "sections": [
             {
-                "h2": "What the evidence shows",
+                "h2": "What this means in plain words",
                 "p": (
-                    "Zhao et al.’s JMIR systematic review describes a qualitative advantage of medical self-service booking: "
-                    "patients’ own descriptions of the reason for visit are often more detailed and illuminating than statements captured over the phone. "
-                    "The review also notes that some patients feel uncomfortable or unable to vocalize certain symptoms — for example sexual health concerns — "
-                    "to a scheduler by phone or in person, and may give an untrue statement. When they schedule online by themselves, they tend to be more candid. "
-                    "That is a documented information-quality benefit, not only a convenience benefit."
+                    "On a rushed phone call, many patients give short or incomplete reasons — especially for private or sensitive problems. "
+                    "When people type for themselves online, they often share clearer detail. That helps reception and doctors prepare the right kind of visit "
+                    "instead of discovering the real issue only after the patient sits down."
                 ),
                 "facts": [
-                    "Self-entered visit reasons often more detailed and illuminating (Zhao et al., JMIR 2017).",
-                    "Patients may withhold or misstate sensitive symptoms to phone schedulers (JMIR 2017).",
-                    "Self-scheduling associated with more candid symptom reporting online (JMIR 2017).",
+                    "Written booking details are often clearer than quick phone notes.",
+                    "Sensitive concerns are easier to share without saying them aloud to a stranger on the phone.",
+                    "Better detail means fewer wrong visit types and less lobby confusion.",
                 ],
             },
             {
-                "h2": "Why clearer reasons improve the visit",
+                "h2": "How BookMyClinics helps",
                 "p": (
-                    "Front-desk and clinical teams prepare differently when they know whether a slot is a follow-up, a new complaint, or a sensitive concern. "
-                    "Richer pre-visit text supports better rooming, better time allocation, and fewer wrong-appointment-type mismatches — "
-                    "another impact category the JMIR review recorded for web-based systems. "
-                    "Combined with pre-arrival registration and policy review (also documented in the same review), online booking becomes an information channel, not just a calendar click."
-                ),
-                "facts": [
-                    "Reducing wrong appointment type appears among reported impacts in the JMIR 2017 synthesis.",
-                    "Pre-visit forms and policy review online can reduce misunderstandings at arrival (JMIR 2017).",
-                ],
-            },
-            {
-                "h2": "How BookMyClinics puts this into practice",
-                "p": (
-                    "BookMyClinics bookings travel with structured clinic, doctor, and slot details into a WhatsApp confirmation the patient can see and the clinic can act on. "
-                    "That gives reception a clearer starting point than a hurried phone note. "
-                    "As with every evidence page here, the candid-detail findings come from published research on web-based scheduling systems generally."
+                    "Each booking carries clinic, doctor, and time into a WhatsApp confirmation both sides can see. "
+                    "Reception starts from a clear appointment, not a half-remembered call."
                 ),
             },
         ],
-        "source_keys": ["zhao2017"],
     },
 ]
 
@@ -835,13 +608,6 @@ def slug_to_title(slug: str) -> str:
 
 def render_page(b: dict, idx: int) -> str:
     img = IMAGES[idx % len(IMAGES)]
-    src_blocks = []
-    for key in b["source_keys"]:
-        s = SOURCES[key]
-        src_blocks.append(
-            f'<li><a href="{s["url"]}" target="_blank" rel="noopener noreferrer">{s["label"]}</a>'
-            f' — {s["detail"]}</li>'
-        )
     sections_html = []
     for sec in b["sections"]:
         facts = ""
@@ -894,20 +660,12 @@ def render_page(b: dict, idx: int) -> str:
     </div>
   </header>
 {''.join(sections_html)}
-  <section class="section sources-section">
-    <h2>Documented sources</h2>
-    <p class="sources-note">Figures on this page come from peer-reviewed journals, systematic reviews, and published operational evaluations of online / digital appointment systems. They are not BookMyClinics proprietary outcome claims. Results vary by clinic type, specialty, and implementation.</p>
-    <ol class="sources-list">
-      {''.join(src_blocks)}
-    </ol>
-  </section>
-
   <section class="cta-band">
-    <h2>Put evidence to work in your clinic</h2>
+    <h2>Ready to try this in your clinic?</h2>
     <p>First 25 clinics become Founding Members on BookMyClinics — free forever.</p>
     <div class="cta-row">
       <a class="btn btn-teal" href="https://bookmyclinics.com/clinic.html">Register Your Clinic</a>
-      <a class="btn btn-ghost" href="./">All {len(BENEFITS)} evidence pages</a>
+      <a class="btn btn-ghost" href="./">All {len(BENEFITS)} benefits</a>
     </div>
   </section>
 
@@ -940,8 +698,8 @@ def render_hub() -> str:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://bookmyclinics.com/landings/benefits/">
-  <title>{len(BENEFITS)} Evidence-Based Benefits of Online Appointment Booking | BookMyClinics</title>
-  <meta name="description" content="{len(BENEFITS)} BookMyClinics landing pages on documented benefits of online medical appointment systems, each backed by published research.">
+  <title>{len(BENEFITS)} Benefits of Online Appointment Booking | BookMyClinics</title>
+  <meta name="description" content="Simple explanations of {len(BENEFITS)} real benefits of online doctor appointment booking for clinics and patients.">
   <meta name="theme-color" content="#0f172a">
   <link rel="icon" type="image/png" href="https://upadhyaymehul9-prog.github.io/bookmyclinic/icon-192.png">
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1018,8 +776,8 @@ def render_hub() -> str:
   </nav>
   <main class="hub">
     <div class="hub-brand">Book<span>My</span>Clinics</div>
-    <h1>{len(BENEFITS)} documented benefits of online appointment booking</h1>
-    <p class="hub-lead">Each page explains one benefit using peer-reviewed reviews, meta-analyses, and published clinic or hospital evaluations — with source links. Figures are from independent studies of online booking systems, not BookMyClinics proprietary claims.</p>
+    <h1>{len(BENEFITS)} benefits of online appointment booking</h1>
+    <p class="hub-lead">Each page explains one benefit in simple English — why online booking helps clinics and patients, without heavy research jargon.</p>
     <div class="hub-list">
 {chr(10).join(items)}
     </div>
@@ -1133,26 +891,30 @@ def patch_landings_index():
     if "benefits/" not in html:
         inject = f"""
       <a class="hub-item" href="benefits/">
-        <strong>Evidence library · {n} benefit pages</strong>
-        <span>Documented research on online appointment booking — one landing page per benefit</span>
+        <strong>Benefits library · {n} pages</strong>
+        <span>Simple English explanations of why online appointment booking helps clinics and patients</span>
       </a>"""
         html = html.replace(
             '      <a class="hub-item" href="lp-partners.html">',
             inject + "\n      <a class=\"hub-item\" href=\"lp-partners.html\">",
         )
     html = re.sub(
-        r"Evidence library · \d+ benefit pages",
-        f"Evidence library · {n} benefit pages",
+        r"(?:Evidence|Benefits) library · \d+(?: benefit)? pages",
+        f"Benefits library · {n} pages",
         html,
     )
     html = re.sub(
-        r"a \d+-page evidence library",
-        f"a {n}-page evidence library",
+        r"a \d+-page (?:evidence )?library[^.]*\.",
+        f"a {n}-page benefits library in simple English.",
         html,
     )
     html = html.replace(
         "Five purpose-built pages for patients, clinics, demo, founding partners, and team growth.",
-        f"Funnel pages plus a {n}-page evidence library on documented benefits of online appointment booking.",
+        f"Funnel pages plus a {n}-page benefits library in simple English.",
+    )
+    html = html.replace(
+        "Documented research on online appointment booking — one landing page per benefit",
+        "Simple English explanations of why online appointment booking helps clinics and patients",
     )
     path.write_text(html)
 
